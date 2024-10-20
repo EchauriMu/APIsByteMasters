@@ -19,6 +19,10 @@ router.delete('/:id', preciosController.deletePrecioItem);
 //------------------ A L E R T A S --------------------
 //GET ALERTAS
 router.get('/:id/alertas', preciosController.getAlertasByListaId);
+//POST ALERTA ITEM
+router.post('/:id/alertas', preciosController.postAlertaItem);
+//POST ALERTAS LISTA
+router.post('/:id/alertas-lista', preciosController.postAlertasList);
 
 export default router;
 
