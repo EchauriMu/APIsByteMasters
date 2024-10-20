@@ -375,3 +375,21 @@ Content-Type: application/json
     ]
   }
 ]
+###PUT ALERTAS ITEM
+PUT {{api}}/9001-000000000001/alertas/2
+Content-Type: application/json
+
+{
+  "_id": "4",
+  "Activo": "S",
+  "Borrado": "N",
+  "fecha": "2024-12-04T00:00:00.000Z",
+  "mensaje": "La lista de precios expira el 2 de diciembre.",
+  "detail_row_reg": [
+      {
+        "_id": "67156acabc57b06756104d6d",
+        "FechaReg": "2024-10-17T00:00:00.628Z",
+        "UsuarioReg": "DRARAMIS"
+      }
+    ]
+}

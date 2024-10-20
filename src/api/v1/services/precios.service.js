@@ -151,3 +151,23 @@ export const postAlertasList = async (id, alertasList) => {
   }
 };
 
+export const putAlertasItem = async (id, alertaId, alertaData) => {
+  try {
+    const listaPrecios = await Precios.findOne({ IdListaOK: id });
+    if (!listaPrecios) {
+      throw boom.notFound('Lista de precios no encontrada');
+    }
+
+    const alertaIndex = listaPrecios.alertas.findIndex(alerta => alerta._id === alertaId);
+    if (alertaIndex === -1) {
+      throw boom.notFound('Alerta no encontrada');
+    }
+
+    listaPrecios.alertas[alertaIndex] = { ...listaPrecios.alertas[alertaIndex], ...alertaData };
+    await listaPrecios.save();
+
+    return listaPrecios.alertas[alertaIndex];
+  } catch (error) {
+    throw boom.internal(error);
+  }
+};

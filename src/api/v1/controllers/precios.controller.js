@@ -123,3 +123,15 @@ export const postAlertasList = async (req, res, next) => {
     next(error);
   }
 };
+
+export const putAlertasItem = async (req, res, next) => {
+  const { id, alertaId } = req.params;
+  const alertaData = req.body;
+
+  try {
+    const alertaActualizada = await preciosServices.putAlertasItem(id, alertaId, alertaData);
+    res.status(200).json(alertaActualizada);
+  } catch (error) {
+    next(error);
+  }
+};
