@@ -1,6 +1,7 @@
 import Precios from '../models/Precios';
 import precios from '../models/Precios';
 import boom from '@hapi/boom';
+
   export const getPreciosList = async () => {
     let preciosList;
     try {
@@ -11,19 +12,25 @@ import boom from '@hapi/boom';
       throw boom.internal(error);
     }
   };
+
+ 
   //optiene el id
-  export const getPreciosItem = async (id, keyType) => {
+  export const getPreciosItem = async (id, keyType, fecha) => {
     let prodPrecioItem;
-  
     try {
       if (keyType === 'OK') {
         prodPrecioItem = await Precios.findOne({
-          'precios.IdProdServOK': id, // Modificado para buscar dentro del array precios
+          'IdListaOK': id,
+          FechaExpiraIni: { $lte: fecha },
+          FechaExpiraFin: { $gte: fecha },
         });
       } else if (keyType === 'BK') {
         prodPrecioItem = await Precios.findOne({
-          'precios.IdProdServBK': id, // Modificado para buscar dentro del array precios
-        });
+          'precios.IdPresentaOK': id,
+          FechaExpiraIni: { $lte: fecha },
+          FechaExpiraFin: { $gte: fecha },
+        } );
+
       }
       return prodPrecioItem;
     } catch (error) {

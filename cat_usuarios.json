@@ -1,0 +1,80 @@
+[
+{
+  "_id": { "$oid": "6356ce422a64ff647ddb9b25" },
+  "username": "admin_user",
+  "email": "admin@example.com",
+  "password": "hashed_password_admin",  
+  "roles": [
+    {
+      "role": "admin",
+      "permissions": [
+        "manage_users",
+        "manage_prices",
+        "view_reports",
+        "manage_promotions",
+        "full_access"
+      ]
+    }
+  ],
+  "detail_row": {
+    "Activo": "S",
+    "Borrado": "N",
+    "detail_row_reg": [
+      {
+        "FechaReg": { "$date": "2023-10-01T00:00:00.000Z" },
+        "UsuarioReg": "SYSTEM"
+      }
+    ]
+  }
+},
+  {
+    "_id": { "$oid": "6356ce422a64ff647ddb9b26" },
+    "username": "price_manager",
+    "email": "price.manager@example.com",
+    "password": "hashed_password_price",  
+    "roles": [
+      {
+        "role": "manager",
+        "permissions": [
+          "manage_prices",
+          "view_reports"
+        ]
+      }
+    ],
+    "detail_row": {
+      "Activo": "S",
+      "Borrado": "N",
+      "detail_row_reg": [
+        {
+          "FechaReg": { "$date": "2023-10-01T00:00:00.000Z" },
+          "UsuarioReg": "SYSTEM"
+        }
+      ]
+    }
+  },
+  {
+    "_id": { "$oid": "6356ce422a64ff647ddb9b27" },
+    "username": "promo_user",
+    "email": "promo.user@example.com",
+    "password": "hashed_password_promo",  
+    "roles": [
+      {
+        "role": "promotion_specialist",
+        "permissions": [
+          "manage_promotions",
+          "view_prices"
+        ]
+      }
+    ],
+    "detail_row": {
+      "Activo": "S",
+      "Borrado": "N",
+      "detail_row_reg": [
+        {
+          "FechaReg": { "$date": "2023-10-01T00:00:00.000Z" },
+          "UsuarioReg": "SYSTEM"
+        }
+      ]
+    }
+  }
+]

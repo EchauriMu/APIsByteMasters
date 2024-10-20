@@ -1,9 +1,15 @@
-@api = http://localhost:3020/api/v1/precios
-GET {{api}}/9005-000000000001
+@api = http://localhost:3020/api/v1/listas-precios
+GET {{api}}/9001-000000000001
+
+### GET
+GET {{api}}/9001-000000000001-000000001?keyType=BK&date=2025-10-01T07:00:00.000Z
+
+### GET
+GET {{api}}/9001-000000000001-000000001?keyType=BK
+
 ### GET
 GET {{api}}
-### GET ITEM
-GET {{api}}/6356ce422a64ff647ddb9b25
+
 ### GET ITEM
 GET {{api}}?precios.detail_row.Activo=2
 ### GET ITEM
