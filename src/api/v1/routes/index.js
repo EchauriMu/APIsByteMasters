@@ -8,7 +8,7 @@ const routerAPI = (app) => {
   const api = config.API_URL;
   app.use(api, router);
   // Routes
-  router.use('/precios', preciosRoutes);
+  router.use('/listas-precios', preciosRoutes);
   return router;
 };
 module.exports = routerAPI;

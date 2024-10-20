@@ -60,6 +60,20 @@ const precioSchema = new Schema({
 });
 
 const promocionSchema = new Schema({
+  _id: {
+    type: String,
+    required: true
+  },
+  Activo: {
+    type: String,
+    enum: ['S', 'N'],
+    default: 'S'
+  },
+  Borrado: {
+    type: String,
+    enum: ['S', 'N'],
+    default: 'N'
+  },
   tipo: {
     type: String,
     enum: ['descuento_volumen', 'descuento_personalizado'],
@@ -72,21 +86,38 @@ const promocionSchema = new Schema({
   condicion: {
     type: String,
     required: true
-  }
+  },
+  detail_row_reg: [detailRowRegSchema]
 });
 
 const alertaSchema = new Schema({
-  fecha_expira: {
-    alertar_dias_antes: {
-      type: Number,
-      required: true,
-      default: 30
-    },
-    reporte: {
-      type: Boolean,
-      default: true
-    }
-  }
+  _id: {
+    type: String,
+    required: true
+  },
+  Activo: {
+    type: String,
+    enum: ['S', 'N'],
+    default: 'S'
+  },
+  Borrado: {
+    type: String,
+    enum: ['S', 'N'],
+    default: 'N'
+  },
+  fecha: {
+    type: Date,
+    required: true
+  },
+  reporte: {
+    type: Boolean,
+    default: true
+  },
+  mensaje: {
+    type: String,
+    required: true
+  },
+  detail_row_reg: [detailRowRegSchema]
 });
 
 const listaPreciosSchema = new Schema({
@@ -138,8 +169,8 @@ const listaPreciosSchema = new Schema({
     default: []
   },
   promociones: [promocionSchema],
-  alertas: alertaSchema
+  alertas: [alertaSchema]
 });
-  
+
 //   module.exports = mongoose.model('ListaPrecios', listaPreciosSchema);
 module.exports = mongoose.model('cat_precios',   listaPreciosSchema, 'cat_precios');
