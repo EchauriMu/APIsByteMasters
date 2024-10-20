@@ -104,3 +104,17 @@ export const deletePrecioItem = async (id) => {
     throw boom.badImplementation(error);
   }
 };
+
+//------------------ A L E R T A S --------------------
+// Obtiene todas las alertas de una lista de precios por su id
+export const getAlertasByListaId = async (id) => {
+  try {
+    const listaPrecios = await Precios.findOne({ 'IdListaOK': id });
+    if (!listaPrecios) {
+      throw boom.notFound('Lista de precios no encontrada');
+    }
+    return listaPrecios.alertas;  // Devuelve las alertas configuradas para esta lista
+  } catch (error) {
+    throw boom.internal(error);
+  }
+};

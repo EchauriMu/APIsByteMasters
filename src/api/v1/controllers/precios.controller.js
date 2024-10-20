@@ -88,3 +88,15 @@ export const deletePrecioItem = async(req, res, next) => {
     next(error)
   }
 }
+
+//------------------ A L E R T A S --------------------
+// Obtener alertas de una lista de precios
+export const getAlertasByListaId = async (req, res, next) => {
+  const { id } = req.params;
+  try {
+    const alertas = await preciosServices.getAlertasByListaId(id);
+    res.json(alertas);
+  } catch (error) {
+    next(error);
+  }
+};
