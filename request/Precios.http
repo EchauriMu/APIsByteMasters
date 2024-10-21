@@ -160,8 +160,7 @@ Content-Type: application/json
 GET {{api}}/9001-000000000001
 
 ### PUT ITEM
-PUT {{api}}/9014-000000000001
-#?date=2025-10-01T07:00:00.000Z
+PUT {{api}}/9001-000000000001?date=2023-01-01T07:00:00.000Z
 Content-Type: application/json
 
 {
@@ -169,7 +168,7 @@ Content-Type: application/json
   "IdListaOK": "9001-000000000001",
   "IdListaBK": "PUBLICO-GENERAL-9001",
   "DesLista": "Publico en General 9001",
-  "FechaExpiraIni": "2023-01-01T07:00:00.000Z",
+  "FechaExpiraIni": "2023-03-01T07:00:00.000Z",
   "FechaExpiraFin": "2024-12-31T07:00:00.000Z",
   "IdTipoListaOK": "IdTipoListaPrecios-IdGeneral",
   "IdTipoGeneraListaOK": "IdTipoGeneraLista-IdManual",
@@ -180,9 +179,9 @@ Content-Type: application/json
       "IdPresentaOK": "9001-000000000001-000000001",
       "IdTipoFormulaOK": "",
       "Formula": "",
-      "CostoIni": 15234.55,
-      "CostoFin": 25600,
-      "Precio": 35605.5,
+      "CostoIni": 14234.55,
+      "CostoFin": 24600,
+      "Precio": 34605.5,
       "detail_row": {
         "Activo": "S",
         "Borrado": "N",
