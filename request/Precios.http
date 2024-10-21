@@ -161,6 +161,7 @@ GET {{api}}/9001-000000000001
 
 ### PUT ITEM
 PUT {{api}}/9014-000000000001
+#?date=2025-10-01T07:00:00.000Z
 Content-Type: application/json
 
 {
