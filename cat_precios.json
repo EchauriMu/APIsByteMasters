@@ -1,0 +1,259 @@
+[{
+    "_id": {
+      "$oid": "6356ce422a64ff647ddb9b24"
+    },
+    "IdInstitutoOK": "9001",
+    "IdListaOK": "9001-000000000001",
+    "IdListaBK": "PUBLICO-GENERAL",
+    "DesLista": "Publico en General",
+    "FechaExpiraIni": {
+      "$date": "2023-01-01T07:00:00.000Z"
+    },
+    "FechaExpiraFin": {
+      "$date": "2024-12-31T07:00:00.000Z"
+    },
+    "IdTipoListaOK": "IdTipoListaPrecios-IdGeneral",
+    "IdTipoGeneraListaOK": "IdTipoGeneraLista-IdManual",
+    "IdTipoFormulaOK": "",
+    "precios": [
+      {
+        "IdProdServOK": "9001-000000000001",
+        "IdPresentaOK": "9001-000000000001-000000001",
+        "IdTipoFormulaOK": "formula-001",
+        "Formula": "(CostoIni + CostoFin) / 2 * factor_demanda",
+        "CostoIni": 15234.55,
+        "CostoFin": 25600,
+        "Precio": 35605.5,
+        "detail_row": {
+          "Activo": "S",
+          "Borrado": "N",
+          "detail_row_reg": [
+            {
+              "FechaReg": {
+                "$date": "2022-04-30T00:00:00.628Z"
+              },
+              "UsuarioReg": "FIBARRAC"
+            }
+          ]
+        }
+      },
+      {
+        "IdProdServOK": "9001-000000000001",
+        "IdPresentaOK": "9001-000000000001-000000002",
+        "IdTipoFormulaOK": "formula-002",
+        "Formula": "(CostoIni + CostoFin) / 2 * factor_demanda",
+        "CostoIni": 15234.55,
+        "CostoFin": 25600,
+        "Precio": 35605.5,
+        "detail_row": {
+          "Activo": "S",
+          "Borrado": "N",
+          "detail_row_reg": [
+            {
+              "FechaReg": {
+                "$date": "2022-04-30T00:00:00.628Z"
+              },
+              "UsuarioReg": "FIBARRAC"
+            }
+          ]
+        }
+      }
+    ],
+    "roles": ["admin", "gestor_precios"],
+    "detail_row": {
+      "Activo": "S",
+      "Borrado": "N",
+      "detail_row_reg": [
+        {
+          "FechaReg": {
+            "$date": "2022-04-30T00:00:00.628Z"
+          },
+          "UsuarioReg": "FIBARRAC"
+        }
+      ]
+    },
+    "negocios": [],
+"promociones": [
+    { "_id" : "1",
+      "Activo": "S",
+      "Borrado": "N",
+      "tipo": "descuento_volumen",
+      "descuento": 10,
+      "condicion": "cantidad > 100",
+      "detail_row_reg": [
+      {
+        "FechaReg": {
+          "$date": "2022-04-30T00:00:00.628Z"
+        },
+        "UsuarioReg": "FIBARRAC"
+      }
+    ]
+    },
+    {
+      "_id" : "2",
+      "Activo": "S",
+      "Borrado": "N",
+      "tipo": "descuento_personalizado",
+      "descuento": 5,
+      "condicion": "cliente_vip",
+      "detail_row_reg": [
+      {
+        "FechaReg": {
+          "$date": "2022-04-30T00:00:00.628Z"
+        },
+        "UsuarioReg": "FIBARRAC"
+      }
+      ]
+    }
+  ],
+  "alertas": [
+      {
+        "_id" : "1",
+        "Activo": "S",
+        "Borrado": "N",
+        "fecha": {
+          "$date": "2024-12-01T00:00:00.000Z"
+        },
+        "reporte": true,
+        "mensaje": "La lista de precios expira el 1 de diciembre.",
+        "detail_row_reg": [
+        {
+          "FechaReg": {
+            "$date": "2022-04-30T00:00:00.628Z"
+          },
+          "UsuarioReg": "FIBARRAC"
+        }
+      ]
+      }
+  ]
+  },
+{
+  "_id": {
+    "$oid": "6356ce422a64ff647ddb9b25"
+  },
+  "IdInstitutoOK": "9001",
+  "IdListaOK": "9001-000000000001",
+  "IdListaBK": "PUBLICO-GENERAL",
+  "DesLista": "Publico en General",
+  "FechaExpiraIni": {
+    "$date": "2025-01-01T07:00:00.000Z"
+  },
+  "FechaExpiraFin": {
+    "$date": "2026-12-31T07:00:00.000Z"
+  },
+  "IdTipoListaOK": "IdTipoListaPrecios-IdGeneral",
+  "IdTipoGeneraListaOK": "IdTipoGeneraLista-IdManual",
+  "IdTipoFormulaOK": "",
+  "precios": [
+    {
+      "IdProdServOK": "9001-000000000001",
+      "IdPresentaOK": "9001-000000000001-000000001",
+      "IdTipoFormulaOK": "formula-001",
+      "Formula": "(CostoIni + CostoFin) / 2 * factor_demanda",
+      "CostoIni": 15234.55,
+      "CostoFin": 25600,
+      "Precio": 35605.5,
+      "detail_row": {
+        "Activo": "S",
+        "Borrado": "N",
+        "detail_row_reg": [
+          {
+            "FechaReg": {
+              "$date": "2022-04-30T00:00:00.628Z"
+            },
+            "UsuarioReg": "FIBARRAC"
+          }
+        ]
+      }
+    },
+    {
+      "IdProdServOK": "9001-000000000001",
+      "IdPresentaOK": "9001-000000000001-000000002",
+      "IdTipoFormulaOK": "formula-002",
+      "Formula": "(CostoIni + CostoFin) / 2 * factor_demanda",
+      "CostoIni": 15234.55,
+      "CostoFin": 25600,
+      "Precio": 35605.5,
+      "detail_row": {
+        "Activo": "S",
+        "Borrado": "N",
+        "detail_row_reg": [
+          {
+            "FechaReg": {
+              "$date": "2022-04-30T00:00:00.628Z"
+            },
+            "UsuarioReg": "FIBARRAC"
+          }
+        ]
+      }
+    }
+  ],
+  "roles": ["admin", "gestor_precios"],
+  "detail_row": {
+    "Activo": "S",
+    "Borrado": "N",
+    "detail_row_reg": [
+      {
+        "FechaReg": {
+          "$date": "2022-04-30T00:00:00.628Z"
+        },
+        "UsuarioReg": "FIBARRAC"
+      }
+    ]
+  },
+  "negocios": [],
+  "promociones": [
+    { "_id" : "1",
+      "Activo": "S",
+      "Borrado": "N",
+      "tipo": "descuento_volumen",
+      "descuento": 10,
+      "condicion": "cantidad > 100",
+      "detail_row_reg": [
+      {
+        "FechaReg": {
+          "$date": "2022-04-30T00:00:00.628Z"
+        },
+        "UsuarioReg": "FIBARRAC"
+      }
+    ]
+    },
+    {
+      "_id" : "2",
+      "Activo": "S",
+      "Borrado": "N",
+      "tipo": "descuento_personalizado",
+      "descuento": 5,
+      "condicion": "cliente_vip",
+      "detail_row_reg": [
+      {
+        "FechaReg": {
+          "$date": "2022-04-30T00:00:00.628Z"
+        },
+        "UsuarioReg": "FIBARRAC"
+      }
+      ]
+    }
+  ],
+  "alertas": [
+      {
+        "_id" : "1",
+        "Activo": "S",
+        "Borrado": "N",
+        "fecha": {
+          "$date": "2024-12-01T00:00:00.000Z"
+        },
+        "reporte": true,
+        "mensaje": "La lista de precios expira el 1 de diciembre.",
+        "detail_row_reg": [
+        {
+          "FechaReg": {
+            "$date": "2022-04-30T00:00:00.628Z"
+          },
+          "UsuarioReg": "FIBARRAC"
+        }
+      ]
+      }
+  ]
+}
+]
