@@ -49,7 +49,7 @@ import boom from '@hapi/boom';
   //PUT (MODIFITY) Precios
   // export const putPreciosItem = async (id, paPrecioItem) => {
   //   try{
-  //     console.log(' PUT API INSTITUTO',id);
+  //     console.log('MALR: PUT API INSTITUTO',id);
 
   //     return await precios.findOneAndUpdate({'precios.IdProdServOK': id}, paPrecioItem, {new: true,});
   //   } catch (error) {
@@ -59,7 +59,7 @@ import boom from '@hapi/boom';
 
   export const putPreciosItem = async (id, paPrecioItem) => {
     try {
-      console.log(' PUT API INSTITUTO', id);
+      console.log('MALR: PUT API INSTITUTO', id);
   
       // Eliminar _id de paPrecioItem si está presente
       const { _id, ...updatedFields } = paPrecioItem;
