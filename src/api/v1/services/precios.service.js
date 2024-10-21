@@ -15,22 +15,13 @@ import boom from '@hapi/boom';
 
  
   //optiene el id
-  export const getPreciosItem = async (id, keyType, fecha) => {
+  export const getPreciosItem = async (id, keyType) => {
     let prodPrecioItem;
     try {
       if (keyType === 'OK') {
-        prodPrecioItem = await Precios.findOne({
+        prodPrecioItem = await Precios.find({
           'IdListaOK': id,
-          FechaExpiraIni: { $lte: fecha },
-          FechaExpiraFin: { $gte: fecha },
         });
-      } else if (keyType === 'BK') {
-        prodPrecioItem = await Precios.findOne({
-          'precios.IdPresentaOK': id,
-          FechaExpiraIni: { $lte: fecha },
-          FechaExpiraFin: { $gte: fecha },
-        } );
-
       }
       return prodPrecioItem;
     } catch (error) {

@@ -2,12 +2,6 @@
 GET {{api}}/9001-000000000001
 
 ### GET
-GET {{api}}/9001-000000000001-000000001?keyType=BK&date=2025-10-01T07:00:00.000Z
-
-### GET
-GET {{api}}/9001-000000000001-000000001?keyType=BK
-
-### GET
 GET {{api}}
 
 ### GET ITEM
@@ -20,11 +14,11 @@ POST {{api}}
 Content-Type: application/json
 
 {
-  "_id": "6350ce422a64ff647ddb9C21",
-  "IdInstitutoOK": "9007",
-  "IdListaOK": "9007-000000000001",
-  "IdListaBK": "PUBLICO-GENERAL-9007",
-  "DesLista": "Publico en General 9007",
+  
+  "IdInstitutoOK": "9014",
+  "IdListaOK": "9014-000000000001",
+  "IdListaBK": "PUBLICO-GENERAL-9014",
+  "DesLista": "Publico en General 9014",
   "FechaExpiraIni": "2023-01-01T07:00:00.000Z",
   "FechaExpiraFin": "2024-12-31T07:00:00.000Z",
   "IdTipoListaOK": "IdTipoListaPrecios-IdGeneral",
@@ -32,8 +26,8 @@ Content-Type: application/json
   "IdTipoFormulaOK": "",
   "precios": [
     {
-      "IdProdServOK": "9007-000000000001",
-      "IdPresentaOK": "9007-000000000001-000000001",
+      "IdProdServOK": "9014-000000000001",
+      "IdPresentaOK": "9014-000000000001-000000001",
       "IdTipoFormulaOK": "",
       "Formula": "",
       "CostoIni": 15234.55,
@@ -51,8 +45,8 @@ Content-Type: application/json
       }
     },
     {
-      "IdProdServOK": "9007-000000000001",
-      "IdPresentaOK": "9007-000000000001-000000002",
+      "IdProdServOK": "9014-000000000001",
+      "IdPresentaOK": "9014-000000000001-000000002",
       "IdTipoFormulaOK": "",
       "Formula": "",
       "CostoIni": 20134.55,
@@ -70,8 +64,8 @@ Content-Type: application/json
       }
     },
     {
-      "IdProdServOK": "9007-000000000001",
-      "IdPresentaOK": "9007-000000000001-000000003",
+      "IdProdServOK": "9014-000000000001",
+      "IdPresentaOK": "9014-000000000001-000000003",
       "IdTipoFormulaOK": "",
       "Formula": "",
       "CostoIni": 18666.55,
@@ -89,8 +83,8 @@ Content-Type: application/json
       }
     },
     {
-      "IdProdServOK": "9007-000000000002",
-      "IdPresentaOK": "9007-000000000002-000000001",
+      "IdProdServOK": "9014-000000000002",
+      "IdPresentaOK": "9014-000000000002-000000001",
       "IdTipoFormulaOK": "",
       "Formula": "",
       "CostoIni": 5000.42,
@@ -108,8 +102,8 @@ Content-Type: application/json
       }
     },
     {
-      "IdProdServOK": "9007-000000000002",
-      "IdPresentaOK": "9007-000000000002-000000002",
+      "IdProdServOK": "9014-000000000002",
+      "IdPresentaOK": "9014-000000000002-000000002",
       "IdTipoFormulaOK": "",
       "Formula": "",
       "CostoIni": 4200.33,
@@ -127,8 +121,8 @@ Content-Type: application/json
       }
     },
     {
-      "IdProdServOK": "9007-000000000002",
-      "IdPresentaOK": "9007-000000000002-000000003",
+      "IdProdServOK": "9014-000000000002",
+      "IdPresentaOK": "9014-000000000002-000000003",
       "IdTipoFormulaOK": "",
       "Formula": "",
       "CostoIni": 3600.33,
@@ -166,11 +160,10 @@ Content-Type: application/json
 GET {{api}}/9001-000000000001
 
 ### PUT ITEM
-PUT {{api}}/9006-000000000001
+PUT {{api}}/9014-000000000001
 Content-Type: application/json
 
 {
-  "_id": "6356ce422a64ff647ddb9C21",
   "IdInstitutoOK": "9001",
   "IdListaOK": "9001-000000000001",
   "IdListaBK": "PUBLICO-GENERAL-9001",

@@ -26,8 +26,7 @@ export const getPreciosList = async (req, res, next) => {
       //clase/objeto.
       //const idProdServ = req.params.id;
     const keyType = req.query.keyType || 'OK';
-    const fecha = req.query.date || new Date();
-    const precioItem = await preciosServices.getPreciosItem(id, keyType,fecha);
+    const precioItem = await preciosServices.getPreciosItem(id, keyType);
     if (!precioItem) {
       throw boom.notFound('No se encontraron precios registrados.');
     } else if (precioItem) {
