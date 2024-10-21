@@ -103,6 +103,8 @@ import mongoose from 'mongoose';
 
 // ...
 
+
+//delete lista
 export const deleteListaPrecios = async (id) => {
   if (!mongoose.Types.ObjectId.isValid(id)) {
     throw boom.badRequest('Formato de ObjectId inválido');
@@ -119,3 +121,43 @@ export const deleteListaPrecios = async (id) => {
   }
 };
 
+
+// Servicio para eliminar una promoción específica de una lista de precios
+export const deletePromocion = async (idLista, idPromocion) => {
+  
+  // Verificar si el ID de la lista es válido
+  if (!mongoose.Types.ObjectId.isValid(idLista)) {
+    throw boom.badRequest('ID de lista inválido.');
+  }
+
+  // Verificar si el ID de la promoción es válido
+  if (typeof idPromocion !== 'string' || idPromocion.trim() === '') {
+    throw boom.badRequest('ID de promoción inválido.');
+  }
+
+  try {
+    // Buscar la lista de precios por su ID
+    const listaPrecios = await Precios.findById(idLista);
+    if (!listaPrecios) {
+      throw boom.notFound(`Lista de precios con ID ${idLista} no encontrada.`);
+    }
+
+    // Filtrar las promociones para eliminar la indicada
+    const promocionesActualizadas = listaPrecios.promociones.filter(
+      (promo) => promo._id !== idPromocion
+    );
+
+    // Verificar si se encontró la promoción
+    if (promocionesActualizadas.length === listaPrecios.promociones.length) {
+      throw boom.notFound(`Promoción con ID ${idPromocion} no encontrada en la lista.`);
+    }
+
+    // Actualizar la lista de precios con las promociones filtradas
+    listaPrecios.promociones = promocionesActualizadas;
+    await listaPrecios.save();
+
+    return listaPrecios;
+  } catch (error) {
+    throw boom.badImplementation(error);
+  }
+};

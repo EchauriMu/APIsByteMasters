@@ -1,6 +1,8 @@
 import * as preciosServices from '../services/precios.service';
 import boom from '@hapi/boom';
 //MALR: API GET
+const mongoose = require('mongoose');
+
 
 //Todos los Precios
 export const getPreciosList = async (req, res, next) => {
@@ -105,5 +107,32 @@ export const deleteListaPrecios = async (req, res, next) => {
   } catch (error) {
     console.error('Error al eliminar la lista de precios:', error); // Registro del error
     next(error); // Manejo de errores mediante el middleware de Express
+  }
+};
+
+
+// Función para eliminar una promoción de una lista de precios
+export const deletePromocion = async (req, res, next) => {
+  try {
+    // Extraer el ID de la lista de precios y el ID de la promoción desde los parámetros de la solicitud
+    const { id: listaId, idPromocion } = req.params;
+
+    // Verificar que ambos IDs están presentes
+    if (!listaId || !idPromocion) {
+      return res.status(400).json({ message: "ID de lista de precios y promoción son requeridos." });
+    }
+
+    // Llamar al servicio de eliminación de la promoción
+    const deletedLista = await preciosServices.deletePromocion(listaId, idPromocion);
+
+    // Retornar respuesta exitosa
+    return res.status(200).json({
+      message: "Promoción eliminada correctamente.",
+      data: deletedLista,
+    });
+  } catch (error) {
+    // Manejo de errores
+    console.error('Error al eliminar la promoción:', error);
+    return res.status(500).json({ message: "Error al eliminar la promoción.", error: error.message });
   }
 };

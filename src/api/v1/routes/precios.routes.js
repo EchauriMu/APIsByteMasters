@@ -12,4 +12,7 @@ router.delete('/:id', preciosController.deletePrecioItem);
 // Referencia correcta a deleteListaPrecios
 router.delete('/listas-precios/:id', preciosController.deleteListaPrecios);
 
+// Ruta DELETE para eliminar una promoción de una lista específica
+router.delete('/listas-precios/:id/promociones/:idPromocion', preciosController.deletePromocion);
+
 export default router;
