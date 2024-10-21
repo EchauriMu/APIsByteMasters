@@ -97,3 +97,25 @@ export const deletePrecioItem = async (id) => {
     throw boom.badImplementation(error);
   }
 };
+
+// precios.service.js
+import mongoose from 'mongoose';
+
+// ...
+
+export const deleteListaPrecios = async (id) => {
+  if (!mongoose.Types.ObjectId.isValid(id)) {
+    throw boom.badRequest('Formato de ObjectId inválido');
+  }
+
+  try {
+    const deletedLista = await Precios.findByIdAndDelete(id); // Busca por _id y elimina
+    if (!deletedLista) {
+      throw boom.notFound(`Lista de precios con ID ${id} no encontrada.`);
+    }
+    return deletedLista;
+  } catch (error) {
+    throw boom.badImplementation(error);
+  }
+};
+

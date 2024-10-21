@@ -87,3 +87,23 @@ export const deletePrecioItem = async(req, res, next) => {
     next(error)
   }
 }
+
+
+// precios.controller.js
+
+export const deleteListaPrecios = async (req, res, next) => {
+  try {
+    const { id } = req.params; // Obtén el ID de la lista desde los parámetros de la URL
+    const trimmedId = id.trim(); // Recorta el ID para eliminar caracteres no deseados
+
+    const deletedLista = await preciosServices.deleteListaPrecios(trimmedId); // Llama al servicio de eliminación
+
+    res.status(200).json({
+      message: 'Lista de precios eliminada exitosamente.',
+      data: deletedLista,
+    });
+  } catch (error) {
+    console.error('Error al eliminar la lista de precios:', error); // Registro del error
+    next(error); // Manejo de errores mediante el middleware de Express
+  }
+};
