@@ -38,6 +38,8 @@ export const getPreciosList = async (req, res, next) => {
     next(error);
   }
   };
+
+
   //MALR: POST ITEM
   export const postPreciosItem = async(req, res, next) =>{
     try{
@@ -91,14 +93,18 @@ export const deletePrecioItem = async(req, res, next) => {
 }
 
 
-// precios.controller.js
 
+
+
+
+// precios.controller.js
 export const deleteListaPrecios = async (req, res, next) => {
   try {
-    const { id } = req.params; // Obtén el ID de la lista desde los parámetros de la URL
+    const { id } = req.params; // Obtén el ID desde los parámetros de la URL
     const trimmedId = id.trim(); // Recorta el ID para eliminar caracteres no deseados
 
-    const deletedLista = await preciosServices.deleteListaPrecios(trimmedId); // Llama al servicio de eliminación
+    // Llama al servicio de eliminación usando IdListaOK
+    const deletedLista = await preciosServices.deleteListaPreciosByIdListaOK(trimmedId);
 
     res.status(200).json({
       message: 'Lista de precios eliminada exitosamente.',
@@ -111,7 +117,38 @@ export const deleteListaPrecios = async (req, res, next) => {
 };
 
 
-// Función para eliminar una promoción de una lista de precios
+
+
+
+
+
+
+export const eliminarPrecio = async (req, res) => {
+  try {
+    const { id, idProdServ } = req.params; // Extrae los parámetros de la URL
+
+    // Llama al servicio para eliminar el precio
+    const resultado = await preciosServices.eliminarPrecio(id, idProdServ);
+
+    if (!resultado) {
+      return res.status(404).json({
+        message: `No se encontró la lista con IdListaOK: ${id} o el precio con IdProdServOK: ${idProdServ}.`
+      });
+    }
+
+    // Respuesta 200 OK con mensaje
+    res.status(200).json({ message: 'Precio eliminado exitosamente.' });
+  } catch (error) {
+    console.error('Error al eliminar el precio:', error);
+    res.status(500).json({ message: 'Error al eliminar el precio.', error });
+  }
+};
+
+
+
+
+
+
 export const deletePromocion = async (req, res, next) => {
   try {
     // Extraer el ID de la lista de precios y el ID de la promoción desde los parámetros de la solicitud

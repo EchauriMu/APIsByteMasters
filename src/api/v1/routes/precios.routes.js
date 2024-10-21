@@ -9,10 +9,16 @@ router.post('/', preciosController.postPreciosItem);
 router.put('/:id', preciosController.putPreciosItem);
 router.delete('/:id', preciosController.deletePrecioItem);
 
+router.delete('/listas-precios/:id/precios/:idProdServ', preciosController.eliminarPrecio);
+
 // Referencia correcta a deleteListaPrecios
 router.delete('/listas-precios/:id', preciosController.deleteListaPrecios);
 
 // Ruta DELETE para eliminar una promoción de una lista específica
 router.delete('/listas-precios/:id/promociones/:idPromocion', preciosController.deletePromocion);
+
+// src/api/v1/routes/precios.routes.js
+
+
 
 export default router;

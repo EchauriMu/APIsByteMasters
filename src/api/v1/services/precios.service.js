@@ -98,35 +98,37 @@ export const deletePrecioItem = async (id) => {
   }
 };
 
-// precios.service.js
-import mongoose from 'mongoose';
-
-// ...
 
 
-//delete lista
-export const deleteListaPrecios = async (id) => {
-  if (!mongoose.Types.ObjectId.isValid(id)) {
-    throw boom.badRequest('Formato de ObjectId inválido');
-  }
 
+
+// Servicio para eliminar un precio por ID de producto
+export const eliminarPrecio = async (idLista, idProdServ) => {
   try {
-    const deletedLista = await Precios.findByIdAndDelete(id); // Busca por _id y elimina
-    if (!deletedLista) {
-      throw boom.notFound(`Lista de precios con ID ${id} no encontrada.`);
-    }
-    return deletedLista;
+    // Realiza la eliminación usando $pull
+    const listaActualizada = await Precios.findOneAndUpdate(
+      { IdListaOK: idLista }, // Busca la lista por ID
+      { $pull: { precios: { IdProdServOK: idProdServ } } }, // Elimina el precio específico
+      { new: true } // Devuelve el documento actualizado
+    );
+
+    return listaActualizada; // Devuelve la lista actualizada o null si no se encontró
   } catch (error) {
-    throw boom.badImplementation(error);
+    console.error('Error en el servicio al eliminar el precio:', error);
+    throw error; // Lanza el error para manejarlo en el controlador
   }
 };
 
 
-// Servicio para eliminar una promoción específica de una lista de precios
+
+
+
+
+
+
 export const deletePromocion = async (idLista, idPromocion) => {
-  
   // Verificar si el ID de la lista es válido
-  if (!mongoose.Types.ObjectId.isValid(idLista)) {
+  if (typeof idLista !== 'string' || idLista.trim() === '') {
     throw boom.badRequest('ID de lista inválido.');
   }
 
@@ -136,8 +138,8 @@ export const deletePromocion = async (idLista, idPromocion) => {
   }
 
   try {
-    // Buscar la lista de precios por su ID
-    const listaPrecios = await Precios.findById(idLista);
+    // Buscar la lista de precios por IdListaOK
+    const listaPrecios = await Precios.findOne({ IdListaOK: idLista });
     if (!listaPrecios) {
       throw boom.notFound(`Lista de precios con ID ${idLista} no encontrada.`);
     }

@@ -28,7 +28,7 @@ const precioSchema = new Schema({
 
 // Esquema para las promociones
 const promocionSchema = new Schema({
-  _id: { type: String, required: true }, // Asegúrate de que coincida con el tipo de ID que usas
+  _id: { type: String, required: true }, 
   Activo: { type: String, required: true },
   Borrado: { type: String, required: true },
   tipo: { type: String, required: true },
