@@ -1,5 +1,5 @@
 @api = http://localhost:3020/api/v1/listas-precios
-GET {{api}}/9001-000000000001
+GET {{api}}
 
 ### GET
 GET {{api}}/9001-000000000001-000000001?keyType=BK&date=2025-10-01T07:00:00.000Z
@@ -315,3 +315,33 @@ GET {{api}}/9006-000000000001
 
 ###DELETE ITEM
 DELETE {{api}}/9002-000000000001
+
+###
+GET {{api}}
+
+
+###
+GET http://localhost:3020/api/v1/listas-precios/9007-000000000001/promociones?FechaReg=2022-04-30T00:00:00.628Z
+Content-Type: application/json
+
+
+### Crear una Nueva Promoción
+POST http://localhost:3020/api/v1/listas-precios/9007-000000000001/promociones
+Content-Type: application/json
+
+{
+  "tipo": "descuento_personalizado",
+  "descuento": 15,
+  "condicion": "pasele pasele"
+}
+
+### Modificar una Promoción Existente
+PUT http://localhost:3020/api/v1/listas-precios/9007-000000000001/promociones/1
+Content-Type: application/json
+
+{
+  "tipo": "descuento_personalizado",
+  "descuento": 10,
+  "condicion": "Compra mínima de 10 unidades",
+  "FechaReg": "2024-10-22"
+}
