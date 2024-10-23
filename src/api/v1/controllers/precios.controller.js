@@ -4,95 +4,6 @@ import boom from '@hapi/boom';
 const mongoose = require('mongoose');
 
 
-//Todos los Precios
-export const getPreciosList = async (req, res, next) => {
-    try{
-      const PreciosList = await preciosServices.getPreciosList();
-      if (!PreciosList) {
-        throw boom.notFound('No se encontraron precios registrados.');
-      } else if (PreciosList) {
-        res.status(200).json(PreciosList);
-      } 
-
-      } catch(error) {
-        next(error);
-      }
-    };
-//MALR: Solo un Precio.
-  export const getPrecioItem = async (req, res, next) => {
-    try {
-      //MALR: obtener parametro id mediante la
-      //desestructuracion de objetos
-      const { id } = req.params;
-      //MALR: se obtiene parametro de la forma
-      //clase/objeto.
-      //const idProdServ = req.params.id;
-    const keyType = req.query.keyType || 'OK';
-    const precioItem = await preciosServices.getPreciosItem(id, keyType);
-    if (!precioItem) {
-      throw boom.notFound('No se encontraron precios registrados.');
-    } else if (precioItem) {
-      res.status(200).json(precioItem);
-    }
-  }catch(error){
-    next(error);
-  }
-  };
-
-
-  //MALR: POST ITEM
-  export const postPreciosItem = async(req, res, next) =>{
-    try{
-      //Se guarda el Item
-      const paPrecioItem = req.body;
-      const newPrecioItem = await preciosServices.postPreciosItem(paPrecioItem);
-      if (!newPrecioItem){
-        //no se pudo crear el objeto
-        throw boom.badRequest('No se pudo crear el Precio.');
-      }else if (newPrecioItem){
-        res.status(201).json(newPrecioItem)
-      }
-    } catch (error){
-      next(error)
-    }
-  };
-
-  //MALR: PUT ITEM
-export const putPreciosItem = async(req, res, next) => {
-  try{
-    //El ide a sustituir
-    const { id } = req.params;
-      console.log('MALR: controller id ->',id);
-    //El valor a actualizar
-    const paPrecioItem = req.body;
-    //La actualización
-    const updatePrecioItem = await preciosServices.putPreciosItem(id,paPrecioItem);
-    if(!updatePrecioItem){
-      throw boom.badRequest('No se pudo actualizar el Precio');
-    } else if(updatePrecioItem){
-      res.status(200).json(updatePrecioItem)
-    }
-  } catch (error){
-    next(error)
-  }
-};
-
-// MALR: DELETE ITEM
-export const deletePrecioItem = async(req, res, next) => {
-  try{
-    const {id} = req.params;
-    const deletePrecioItem = await preciosServices.deletePrecioItem(id);
-    if (!deletePrecioItem) {
-      throw boom.badRequest('No se puede eliminar el Precio')
-    } else if (deletePrecioItem){
-      res.status(200).json(deletePrecioItem)
-    }
-  } catch (error) {
-    next(error)
-  }
-}
-
-
 
 
 
@@ -104,7 +15,7 @@ export const deleteListaPrecios = async (req, res, next) => {
     const trimmedId = id.trim(); // Recorta el ID para eliminar caracteres no deseados
 
     // Llama al servicio de eliminación usando IdListaOK
-    const deletedLista = await preciosServices.deleteListaPreciosByIdListaOK(trimmedId);
+    const deletedLista = await preciosServices.eliminarListaPorIdListaOK(trimmedId);
 
     res.status(200).json({
       message: 'Lista de precios eliminada exitosamente.',
@@ -154,11 +65,6 @@ export const deletePromocion = async (req, res, next) => {
     // Extraer el ID de la lista de precios y el ID de la promoción desde los parámetros de la solicitud
     const { id: listaId, idPromocion } = req.params;
 
-    // Verificar que ambos IDs están presentes
-    if (!listaId || !idPromocion) {
-      return res.status(400).json({ message: "ID de lista de precios y promoción son requeridos." });
-    }
-
     // Llamar al servicio de eliminación de la promoción
     const deletedLista = await preciosServices.deletePromocion(listaId, idPromocion);
 
@@ -171,5 +77,26 @@ export const deletePromocion = async (req, res, next) => {
     // Manejo de errores
     console.error('Error al eliminar la promoción:', error);
     return res.status(500).json({ message: "Error al eliminar la promoción.", error: error.message });
+  }
+};
+
+
+// Controlador para eliminar una alerta
+export const eliminarAlerta = async (req, res) => {
+  try {
+    const { id, idAlerta } = req.params; // Extraemos los parámetros de la URL
+
+    const resultado = await preciosServices.eliminarAlerta(id, idAlerta);
+
+    if (!resultado) {
+      return res.status(404).json({
+        message: `No se encontró la lista con IdListaOK: ${id} o la alerta con _id: ${idAlerta}.`
+      });
+    }
+
+    res.status(200).json({ message: 'Alerta eliminada exitosamente.' });
+  } catch (error) {
+    console.error('Error al eliminar la alerta:', error);
+    res.status(500).json({ message: 'Error al eliminar la alerta.', error });
   }
 };

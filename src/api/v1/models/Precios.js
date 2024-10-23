@@ -14,6 +14,13 @@ const detailRowSchema = new Schema({
   detail_row_reg: [detailRowRegSchema]
 });
 
+const alertaSchema = new Schema({
+  _id: { type: String, required: true },
+  mensaje: { type: String, required: true },
+  fecha: { type: Date, required: true }
+});
+
+
 // Esquema para los precios
 const precioSchema = new Schema({
   IdProdServOK: { type: String, required: true },
@@ -53,7 +60,8 @@ const listaPreciosSchema = new Schema({
   detail_row: detailRowSchema,
   roles: { type: Array, default: [] },
   negocios: { type: Array, default: [] },
-  promociones: [promocionSchema] // Cambiado para usar el nuevo esquema
+  promociones: [promocionSchema], // Cambiado para usar el nuevo esquema
+  alertas: [alertaSchema] // Definimos el array de alertas
 });
 
 // Exportar el modelo
