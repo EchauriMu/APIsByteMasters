@@ -1,0 +1,21 @@
+@api = http://localhost:3020/api/v1/reportes/
+GET {{api}}precios/9001-000000000001
+
+### GET
+GET {{api}}precios/9001-000000000001
+
+### GET
+GET {{api}}precios/9001-000000000001-000000002?keyType=BK
+
+### GET
+GET {{api}}precios
+###
+GET {{api}}expiraciones/9001-000000000001
+
+### GET
+GET {{api}}expiraciones/9001-000000000001
+
+
+
+### GET
+GET {{api}}expiraciones

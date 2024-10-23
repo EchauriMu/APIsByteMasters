@@ -28,12 +28,12 @@ Content-Type: application/json
 }
 
 ### PUT ITEM
-PUT {{api}}/9001-000000000001/precios/9001-000000000001-000000007
+PUT {{api}}/9001-000000000001/precios/9001-000000000001-000000001
 Content-Type: application/json
 
 {
   "IdProdServOK": "9001-000000000001",
-  "IdPresentaOK": "9001-000000000001-000000007",
+  "IdPresentaOK": "9001-000000000001-000000001",
   "IdTipoFormulaOK": "formula-001",
   "Formula": "(CostoIni + CostoFin) / 2 * factor_demanda",
   "CostoIni": 666.666,
