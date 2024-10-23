@@ -1,0 +1,52 @@
+@api = http://localhost:3020/api/v1/listas-precios
+
+### GET una lista de precios por ID
+GET {{api}}/9001-000000000001/precios
+
+### POST ITEM
+POST {{api}}/9001-000000000001/precios
+Content-Type: application/json
+
+{
+  "IdProdServOK": "9001-000000000001",
+  "IdPresentaOK": "9001-000000000001-000000007",
+  "IdTipoFormulaOK": "formula-001",
+  "Formula": "(CostoIni + CostoFin) / 2 * factor_demanda",
+  "CostoIni": 777.777,
+  "CostoFin": 25600,
+  "Precio": 35605.5,
+  "detail_row": {
+    "Activo": "S",
+    "Borrado": "N",
+    "detail_row_reg": [
+      {
+        "FechaReg": "2022-04-30T00:00:00.628Z",
+        "UsuarioReg": "FIBARRAC"
+      }
+    ]
+  }
+}
+
+### PUT ITEM
+PUT {{api}}/9001-000000000001/precios/9001-000000000001-000000001
+Content-Type: application/json
+
+{
+  "IdProdServOK": "9001-000000000001",
+  "IdPresentaOK": "9001-000000000001-000000001",
+  "IdTipoFormulaOK": "formula-001",
+  "Formula": "(CostoIni + CostoFin) / 2 * factor_demanda",
+  "CostoIni": 666.666,
+  "CostoFin": 25600,
+  "Precio": 35605.5,
+  "detail_row": {
+    "Activo": "S",
+    "Borrado": "N",
+    "detail_row_reg": [
+      {
+        "FechaReg": "2022-04-30T00:00:00.628Z",
+        "UsuarioReg": "FIBARRAC"
+      }
+    ]
+  }
+}

@@ -1,5 +1,5 @@
 @api = http://localhost:3020/api/v1/listas-precios
-GET {{api}}/9001-000000000001
+GET {{api}}/9001-000000000001/precios
 
 ### GET
 GET {{api}}
