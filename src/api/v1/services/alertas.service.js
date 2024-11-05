@@ -37,7 +37,6 @@ export const postAlertasList = async (id, alertasList) => {
     }
 
     listaPrecios.alertas.push(...alertasList);
-
     await listaPrecios.save();
 
     return alertasList;
