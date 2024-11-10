@@ -121,6 +121,7 @@ const alertaSchema = new Schema({
 });
 
 const listaPreciosSchema = new Schema({
+  
   IdInstitutoOK: {
     type: String,
     required: true
