@@ -1,6 +1,9 @@
 @api = http://localhost:3020/api/v1/listas-precios
-GET {{api}}/9001-000000000001/precios
+GET {{api}}/9001-000000000001
 
+
+###
+GET {{api}}/9001-000000000001-000000001?keyType=BK
 ### GET
 GET {{api}}
 
@@ -308,3 +311,6 @@ GET {{api}}/9006-000000000001
 
 ###DELETE ITEM
 DELETE {{api}}/9002-000000000001
+
+###
+DELETE {{api}}/9001-000000000001-000000001

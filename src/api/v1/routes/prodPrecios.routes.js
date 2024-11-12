@@ -10,5 +10,6 @@ router.get('/:id/precios', prodPreciosController.getPreciosByLista);
 router.post('/:id/precios', prodPreciosController.postPrecioToLista);
 router.put('/:id/precios/:idPrecios', prodPreciosController.putPrecioInLista);
 
+router.delete(':id/precios/:idPrecios', prodPreciosController.eliminarPrecio);
 
 export default router;

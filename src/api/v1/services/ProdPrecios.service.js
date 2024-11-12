@@ -76,3 +76,21 @@ export const putPrecioInLista = async (idLista, idPrecio, precioActualizado) => 
       throw boom.internal(error);
     }
 };
+
+// Servicio para eliminar un precio por ID de producto
+export const eliminarPrecio = async (idLista, idProdServ) => {
+  try {
+    console.log('Si entro')
+    // Realiza la eliminación usando $pull
+    const listaActualizada = await precios.findOneAndUpdate(
+      { IdListaOK: idLista }, // Busca la lista por ID
+      { $pull: { precios: { IdProdServOK: idProdServ } } }, // Elimina el precio específico
+      { new: true } // Devuelve el documento actualizado
+    );
+
+    return listaActualizada; // Devuelve la lista actualizada o null si no se encontró
+  } catch (error) {
+    console.error('Error en el servicio al eliminar el precio:', error);
+    throw error; // Lanza el error para manejarlo en el controlador
+  }
+};

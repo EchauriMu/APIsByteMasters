@@ -45,3 +45,25 @@ export const putPrecioInLista = async (req, res, next) => {
       next(error);
     }
 };
+
+export const eliminarPrecio = async (req, res) => {
+  try {
+    const { id, idProdServ } = req.params; // Extrae los parámetros de la URL
+    
+    // Llama al servicio para eliminar el precio
+    const resultado = await prodPreciosServices.eliminarPrecio(id, idProdServ);
+
+    if (!resultado) {
+      return res.status(404).json({
+        message: `No se encontró la lista con IdListaOK: ${id} o el precio con IdProdServOK: ${idProdServ}.`
+      });
+      console.error('Error al eliminar el precio:', error);
+    }
+
+    // Respuesta 200 OK con mensaje
+    res.status(200).json({ message: 'Precio eliminado exitosamente.' });
+  } catch (error) {
+    console.error('Error al eliminar el precio:', error);
+    res.status(500).json({ message: 'Error al eliminar el precio.', error });
+  }
+};

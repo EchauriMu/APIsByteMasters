@@ -23,6 +23,19 @@ export const getPreciosItem = async (id, keyType) => {
         'IdListaOK': id,
       });
     }
+     else if (keyType === 'BK') {
+      prodPrecioItem = await Precios.findOne({
+        'precios': {
+          $elemMatch: {
+            'IdPresentaOK': id,  // Buscar dentro del array 'precios' por 'IdPresentaOK'
+          }
+        }
+      });
+      if (prodPrecioItem) {
+        // Buscar dentro del array 'precios' el elemento específico que coincida con el IdPresentaOK
+        prodPrecioItem = prodPrecioItem.precios.find(p => p.IdPresentaOK === id);
+      }
+      }
     return prodPrecioItem;
   } catch (error) {
     throw boom.internal(error);
