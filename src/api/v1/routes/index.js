@@ -5,6 +5,7 @@ import config from '../../../config/config';
 // Import Routes
 import preciosRoutes from './precios.routes';
 import prodPreciosRoutes from './prodPrecios.routes.js';
+import preciosEliminarRoutes from './preciosEliminar.routes.js';
 
 import reportesRoutes from './reportes.routes';
 const routerAPI = (app) => {
@@ -15,6 +16,7 @@ const routerAPI = (app) => {
   //router.use('/listas-precios', preciosRoutes);
 
   router.use('/listas-precios', prodPreciosRoutes);
+  router.use('/precios', preciosEliminarRoutes);
   router.use('/listas-precios', preciosRoutes);
   router.use('/reportes', reportesRoutes);
   //router.use('/reportes/precios', reportesRoutes);
