@@ -13,6 +13,9 @@ router.post('/', preciosController.postPreciosItem);
 //PUT
 router.put('/:id', preciosController.putPreciosItem);
 
+//PATCH
+router.patch('/:id', preciosController.patchPreciosItem);
+
 //DELETE
 router.delete('/:id', preciosController.deletePrecioItem);
 
