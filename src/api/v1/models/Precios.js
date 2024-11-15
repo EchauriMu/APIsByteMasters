@@ -11,7 +11,7 @@ const detailRowRegSchema = new Schema({
     type: String,
     required: true
   }
-});
+},{ _id: false });
 
 const detailRowSchema = new Schema({
   Activo: {
@@ -25,7 +25,7 @@ const detailRowSchema = new Schema({
     default: 'N'
   },
   detail_row_reg: [detailRowRegSchema]
-});
+},{ _id: false });
 
 const precioSchema = new Schema({
   IdProdServOK: {
@@ -57,7 +57,7 @@ const precioSchema = new Schema({
     required: true
   },
   detail_row: detailRowSchema
-});
+},{ _id: false });
 
 const promocionSchema = new Schema({
   _id: {
@@ -88,7 +88,7 @@ const promocionSchema = new Schema({
     required: true
   },
   detail_row_reg: [detailRowRegSchema]
-});
+},{ _id: false });
 
 const alertaSchema = new Schema({
   _id: {
@@ -118,7 +118,46 @@ const alertaSchema = new Schema({
     required: true
   },
   detail_row_reg: [detailRowRegSchema]
-});
+},{ _id: false });
+
+const historialItem = new Schema({
+  Id:{
+    type: String,
+    default: ''
+  },
+  IdTipoFormulaOK: {
+    type: String,
+    default: ''
+  },
+  Formula: {
+    type: String,
+    default: ''
+  },
+  CostoIni: {
+    type: Number,
+    required: true
+  },
+  CostoFin: {
+    type: Number,
+    required: true
+  },
+  Precio: {
+    type: Number,
+    required: true
+  },
+  detail_row: detailRowSchema
+},{ _id: false });
+
+const historialSchema = new Schema({
+  IdProdServOK: {
+    type: String,
+    required: true
+  },
+  IdPresentaOK: {
+    type: String,
+    required: true
+  },historial:[historialItem]
+},{ _id: false });
 
 const listaPreciosSchema = new Schema({
   
@@ -170,8 +209,9 @@ const listaPreciosSchema = new Schema({
     default: []
   },
   promociones: [promocionSchema],
-  alertas: [alertaSchema]
-});
+  alertas: [alertaSchema],
+  historial: [historialSchema]
+},{ _id: false });
 
 //   module.exports = mongoose.model('ListaPrecios', listaPreciosSchema);
 module.exports = mongoose.model('cat_precios',   listaPreciosSchema, 'cat_precios');
