@@ -76,3 +76,34 @@ export const putPrecioInLista = async (idLista, idPrecio, precioActualizado) => 
       throw boom.internal(error);
     }
 };
+
+export const eliminarPrecio = async (idLista,idPrecio) => {
+  try {
+    // Buscar la lista de precios por id
+    const listaPrecios = await precios.findOne({ 'IdListaOK': idLista });
+
+    // Si no se encuentra la lista, lanzar un error
+    if (!listaPrecios) {
+        throw boom.notFound(`No se encontró la lista de precios con el ID ${idLista}`);
+    }
+
+    // Buscar el índice del precio que queremos eliminar
+    const index = listaPrecios.precios.findIndex(precio => precio.IdPresentaOK === idPrecio);
+    
+    // Si no se encuentra el precio, lanzar un error
+    if (index === -1) {
+        throw boom.notFound(`No se encontró el precio con IdPresentaOK ${idPrecio}`);
+    }
+
+    // Eliminar el precio del arreglo `precios`
+    listaPrecios.precios.splice(index, 1);
+
+    // Guardar la lista actualizada en la base de datos
+    await listaPrecios.save();
+
+    // Devolver la lista de precios actualizada
+    return listaPrecios; 
+} catch (error) {
+    throw boom.internal(error);
+}
+};

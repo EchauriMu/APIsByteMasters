@@ -1,0 +1,1415 @@
+[{
+  "IdInstitutoOK": "9001",
+  "IdListaOK": "9001-000000000001",
+  "IdListaBK": "PUBLICO-GENERAL",
+  "DesLista": "Publico en General",
+  "FechaExpiraIni": {
+    "$date": "2023-01-01T07:00:00.000Z"
+  },
+  "FechaExpiraFin": {
+    "$date": "2024-12-31T07:00:00.000Z"
+  },
+  "IdTipoListaOK": "IdTipoListaPrecios-IdGeneral",
+  "IdTipoGeneraListaOK": "IdTipoGeneraLista-IdManual",
+  "IdTipoFormulaOK": "",
+  "precios": [
+    {
+      "IdProdServOK": "9001-000000000001",
+      "IdPresentaOK": "9001-000000000001-001",
+      "IdTipoFormulaOK": "2111",
+      "Formula": "2111",
+      "CostoIni": 2111,
+      "CostoFin": 2111,
+      "Precio": 2111,
+      "detail_row": {
+        "Activo": "S",
+        "Borrado": "N",
+        "detail_row_reg": [
+          {
+            "FechaReg": {
+              "$date": "2024-10-05T00:00:00.628Z"
+            },
+            "UsuarioReg": "Aramis"
+          }
+        ]
+      }
+    },
+    {
+      "IdProdServOK": "9001-000000000001",
+      "IdPresentaOK": "9001-000000000001-002",
+      "IdTipoFormulaOK": "1414",
+      "Formula": "1414",
+      "CostoIni": 123,
+      "CostoFin": 123,
+      "Precio": 123,
+      "detail_row": {
+        "Activo": "S",
+        "Borrado": "N",
+        "detail_row_reg": [
+          {
+            "FechaReg": {
+              "$date": "2024-10-05T00:00:00.628Z"
+            },
+            "UsuarioReg": "Carlos"
+          }
+        ]
+      }
+    },
+    {
+      "IdProdServOK": "9001-000000000001",
+      "IdPresentaOK": "9001-000000000001-003",
+      "IdTipoFormulaOK": "14",
+      "Formula": "(inicial + final) *2",
+      "CostoIni": 10,
+      "CostoFin": 15,
+      "Precio": 25,
+      "detail_row": {
+        "Activo": "S",
+        "Borrado": "N",
+        "detail_row_reg": [
+          {
+            "FechaReg": {
+              "$date": "2024-10-05T00:00:00.628Z"
+            },
+            "UsuarioReg": "Carlos"
+          }
+        ]
+      }
+    }
+  ],
+
+  "detail_row": {
+    "Activo": "S",
+    "Borrado": "N",
+    "detail_row_reg": [
+      {
+        "FechaReg": {
+          "$date": "2022-04-30T00:00:00.628Z"
+        },
+        "UsuarioReg": "FIBARRAC"
+      }
+    ]
+  },
+  "negocios": [],
+  "promociones": [
+    {
+      "_id": "1",
+      "Activo": "S",
+      "Borrado": "N",
+      "tipo": "descuento_volumen",
+      "descuento": 10,
+      "condicion": "cantidad > 100",
+      "detail_row_reg": [
+        {
+          "FechaReg": {
+            "$date": "2022-04-30T00:00:00.628Z"
+          },
+          "UsuarioReg": "FIBARRAC"
+        }
+      ]
+    },
+    {
+      "_id": "2",
+      "Activo": "S",
+      "Borrado": "N",
+      "tipo": "descuento_personalizado",
+      "descuento": 5,
+      "condicion": "cliente_vip",
+      "detail_row_reg": [
+        {
+          "FechaReg": {
+            "$date": "2022-04-30T00:00:00.628Z"
+          },
+          "UsuarioReg": "FIBARRAC"
+        }
+      ]
+    }
+  ],
+  "alertas": [
+    {
+      "_id": "1",
+      "Activo": "S",
+      "Borrado": "N",
+      "fecha": {
+        "$date": "2024-12-01T00:00:00.000Z"
+      },
+      "reporte": true,
+      "mensaje": "La lista de precios expira el 1 de diciembre.",
+      "detail_row_reg": [
+        {
+          "FechaReg": {
+            "$date": "2022-04-30T00:00:00.628Z"
+          },
+          "UsuarioReg": "FIBARRAC"
+        }
+      ]
+    }
+  ],
+  "historial":[
+    {
+      "IdProdServOK": "9001-000000000001",
+      "IdPresentaOK": "9001-000000000001-001",
+      "historial": [{
+        "Id":"1",
+        "IdTipoFormulaOK": "2111",
+        "Formula": "2111",
+        "CostoIni": 2111,
+        "CostoFin": 2111,
+        "Precio": 2111,
+        "detail_row": {
+          "Activo": "S",
+          "Borrado": "N",
+          "detail_row_reg": [
+            {
+              "FechaReg": {
+                "$date": "2024-10-4T00:00:00.628Z"
+              },
+              "UsuarioReg": "Aramis"
+            }
+          ]
+        }
+      }]
+      
+    },
+    {
+      "IdProdServOK": "9001-000000000001",
+      "IdPresentaOK": "9001-000000000001-002",
+      "historial":[{
+        "Id":"1",
+        "IdTipoFormulaOK": "1414",
+        "Formula": "1414",
+        "CostoIni": 123,
+        "CostoFin": 123,
+        "Precio": 123,
+        "detail_row": {
+          "Activo": "S",
+          "Borrado": "N",
+          "detail_row_reg": [
+            {
+              "FechaReg": {
+                "$date": "2024-10-05T00:00:00.628Z"
+              },
+              "UsuarioReg": "Carlos"
+            }
+          ]
+        }
+      }] 
+    }
+  ]
+},
+{
+  "IdInstitutoOK": "9002",
+  "IdListaOK": "9002-000000000002",
+  "IdListaBK": "PUBLICO-EXCLUSIVO",
+  "DesLista": "Publico Exclusivo",
+  "FechaExpiraIni": {
+    "$date": "2023-05-01T07:00:00.000Z"
+  },
+  "FechaExpiraFin": {
+    "$date": "2024-11-30T07:00:00.000Z"
+  },
+  "IdTipoListaOK": "IdTipoListaPrecios-IdExclusivo",
+  "IdTipoGeneraListaOK": "IdTipoGeneraLista-IdManual",
+  "IdTipoFormulaOK": "",
+  "precios": [
+    {
+      "IdProdServOK": "9002-000000000002",
+      "IdPresentaOK": "9002-000000000002-001",
+      "IdTipoFormulaOK": "2112",
+      "Formula": "2112",
+      "CostoIni": 2200,
+      "CostoFin": 2200,
+      "Precio": 2200,
+      "detail_row": {
+        "Activo": "S",
+        "Borrado": "N",
+        "detail_row_reg": [
+          {
+            "FechaReg": {
+              "$date": "2024-08-01T00:00:00.628Z"
+            },
+            "UsuarioReg": "Laura"
+          }
+        ]
+      }
+    }
+  ],
+
+  "detail_row": {
+    "Activo": "S",
+    "Borrado": "N",
+    "detail_row_reg": [
+      {
+        "FechaReg": {
+          "$date": "2022-06-01T00:00:00.628Z"
+        },
+        "UsuarioReg": "LAURA"
+      }
+    ]
+  },
+  "negocios": [],
+  "promociones": [
+    {
+      "_id": "3",
+      "Activo": "S",
+      "Borrado": "N",
+      "tipo": "descuento_volumen",
+      "descuento": 15,
+      "condicion": "cantidad > 150",
+      "detail_row_reg": [
+        {
+          "FechaReg": {
+            "$date": "2022-06-01T00:00:00.628Z"
+          },
+          "UsuarioReg": "LAURA"
+        }
+      ]
+    }
+  ],
+  "alertas": [
+    {
+      "_id": "2",
+      "Activo": "S",
+      "Borrado": "N",
+      "fecha": {
+        "$date": "2024-11-15T00:00:00.000Z"
+      },
+      "reporte": true,
+      "mensaje": "La lista de precios expira el 15 de noviembre.",
+      "detail_row_reg": [
+        {
+          "FechaReg": {
+            "$date": "2022-06-01T00:00:00.628Z"
+          },
+          "UsuarioReg": "LAURA"
+        }
+      ]
+    }
+  ],
+  "historial": [
+    {
+      "IdProdServOK": "9002-000000000002",
+      "IdPresentaOK": "9002-000000000002-001",
+      "historial":[{
+        "Id":"1",
+        "IdTipoFormulaOK": "2112",
+        "Formula": "2112",
+        "CostoIni": 2200,
+        "CostoFin": 2200,
+        "Precio": 2200,
+        "detail_row": {
+          "Activo": "S",
+          "Borrado": "N",
+          "detail_row_reg": [
+            {
+              "FechaReg": {
+                "$date": "2024-08-01T00:00:00.628Z"
+              },
+              "UsuarioReg": "Laura"
+            }
+          ]
+        }
+      }]
+    }
+  ]
+},
+{
+  "IdInstitutoOK": "9003",
+  "IdListaOK": "9003-000000000003",
+  "IdListaBK": "PUBLICO-SEGURIDAD",
+  "DesLista": "Lista para Seguridad",
+  "FechaExpiraIni": {
+    "$date": "2023-03-01T07:00:00.000Z"
+  },
+  "FechaExpiraFin": {
+    "$date": "2025-03-01T07:00:00.000Z"
+  },
+  "IdTipoListaOK": "IdTipoListaPrecios-IdSeguridad",
+  "IdTipoGeneraListaOK": "IdTipoGeneraLista-IdAutomatica",
+  "IdTipoFormulaOK": "",
+  "precios": [
+    {
+      "IdProdServOK": "3100",
+      "IdPresentaOK": "313",
+      "IdTipoFormulaOK": "3100",
+      "Formula": "3100",
+      "CostoIni": 3000,
+      "CostoFin": 3000,
+      "Precio": 3000,
+      "detail_row": {
+        "Activo": "S",
+        "Borrado": "N",
+        "detail_row_reg": [
+          {
+            "FechaReg": {
+              "$date": "2024-07-01T00:00:00.628Z"
+            },
+            "UsuarioReg": "Ana"
+          }
+        ]
+      }
+    },
+    {
+      "IdProdServOK": "3200",
+      "IdPresentaOK": "323",
+      "IdTipoFormulaOK": "3200",
+      "Formula": "3200",
+      "CostoIni": 4000,
+      "CostoFin": 4000,
+      "Precio": 4000,
+      "detail_row": {
+        "Activo": "S",
+        "Borrado": "N",
+        "detail_row_reg": [
+          {
+            "FechaReg": {
+              "$date": "2024-07-01T00:00:00.628Z"
+            },
+            "UsuarioReg": "Carlos"
+          }
+        ]
+      }
+    }
+  ],
+  "detail_row": {
+    "Activo": "S",
+    "Borrado": "N",
+    "detail_row_reg": [
+      {
+        "FechaReg": {
+          "$date": "2023-01-15T00:00:00.628Z"
+        },
+        "UsuarioReg": "Juan"
+      }
+    ]
+  },
+  "negocios": [],
+  "promociones": [
+    {
+      "_id": "4",
+      "Activo": "S",
+      "Borrado": "N",
+      "tipo": "descuento_volumen",
+      "descuento": 20,
+      "condicion": "cantidad > 200",
+      "detail_row_reg": [
+        {
+          "FechaReg": {
+            "$date": "2023-01-15T00:00:00.628Z"
+          },
+          "UsuarioReg": "Juan"
+        }
+      ]
+    }
+  ],
+  "alertas": [
+    {
+      "_id": "3",
+      "Activo": "S",
+      "Borrado": "N",
+      "fecha": {
+        "$date": "2025-03-01T00:00:00.000Z"
+      },
+      "reporte": true,
+      "mensaje": "La lista de precios expira el 1 de marzo de 2025.",
+      "detail_row_reg": [
+        {
+          "FechaReg": {
+            "$date": "2023-01-15T00:00:00.628Z"
+          },
+          "UsuarioReg": "Juan"
+        }
+      ]
+    }
+  ]
+},
+{
+  "IdInstitutoOK": "9004",
+  "IdListaOK": "9004-000000000004",
+  "IdListaBK": "PUBLICO-ALIMENTOS",
+  "DesLista": "Lista para Alimentos",
+  "FechaExpiraIni": {
+    "$date": "2024-01-01T07:00:00.000Z"
+  },
+  "FechaExpiraFin": {
+    "$date": "2024-12-31T07:00:00.000Z"
+  },
+  "IdTipoListaOK": "IdTipoListaPrecios-IdAlimentos",
+  "IdTipoGeneraListaOK": "IdTipoGeneraLista-IdManual",
+  "IdTipoFormulaOK": "",
+  "precios": [
+    {
+      "IdProdServOK": "4100",
+      "IdPresentaOK": "413",
+      "IdTipoFormulaOK": "4100",
+      "Formula": "4100",
+      "CostoIni": 500,
+      "CostoFin": 500,
+      "Precio": 500,
+      "detail_row": {
+        "Activo": "S",
+        "Borrado": "N",
+        "detail_row_reg": [
+          {
+            "FechaReg": {
+              "$date": "2024-05-10T00:00:00.628Z"
+            },
+            "UsuarioReg": "Mario"
+          }
+        ]
+      }
+    }
+  ],
+
+  "detail_row": {
+    "Activo": "S",
+    "Borrado": "N",
+    "detail_row_reg": [
+      {
+        "FechaReg": {
+          "$date": "2024-03-05T00:00:00.628Z"
+        },
+        "UsuarioReg": "Mario"
+      }
+    ]
+  },
+  "negocios": [],
+  "promociones": [
+    {
+      "_id": "5",
+      "Activo": "S",
+      "Borrado": "N",
+      "tipo": "descuento_personalizado",
+      "descuento": 10,
+      "condicion": "cliente_frecuente",
+      "detail_row_reg": [
+        {
+          "FechaReg": {
+            "$date": "2024-03-05T00:00:00.628Z"
+          },
+          "UsuarioReg": "Mario"
+        }
+      ]
+    }
+  ],
+  "alertas": [
+    {
+      "_id": "4",
+      "Activo": "S",
+      "Borrado": "N",
+      "fecha": {
+        "$date": "2024-12-31T00:00:00.000Z"
+      },
+      "reporte": true,
+      "mensaje": "La lista de precios expira el 31 de diciembre de 2024.",
+      "detail_row_reg": [
+        {
+          "FechaReg": {
+            "$date": "2024-03-05T00:00:00.628Z"
+          },
+          "UsuarioReg": "Mario"
+        }
+      ]
+    }
+  ]
+},
+{
+  "IdInstitutoOK": "9005",
+  "IdListaOK": "9005-000000000005",
+  "IdListaBK": "PUBLICO-MEDICINA",
+  "DesLista": "Lista para Medicina",
+  "FechaExpiraIni": {
+    "$date": "2024-02-01T07:00:00.000Z"
+  },
+  "FechaExpiraFin": {
+    "$date": "2024-11-30T07:00:00.000Z"
+  },
+  "IdTipoListaOK": "IdTipoListaPrecios-IdMedicina",
+  "IdTipoGeneraListaOK": "IdTipoGeneraLista-IdManual",
+  "IdTipoFormulaOK": "",
+  "precios": [
+    {
+      "IdProdServOK": "5100",
+      "IdPresentaOK": "513",
+      "IdTipoFormulaOK": "5100",
+      "Formula": "5100",
+      "CostoIni": 1500,
+      "CostoFin": 1500,
+      "Precio": 1500,
+      "detail_row": {
+        "Activo": "S",
+        "Borrado": "N",
+        "detail_row_reg": [
+          {
+            "FechaReg": {
+              "$date": "2024-06-15T00:00:00.628Z"
+            },
+            "UsuarioReg": "Sofia"
+          }
+        ]
+      }
+    }
+  ],
+
+  "detail_row": {
+    "Activo": "S",
+    "Borrado": "N",
+    "detail_row_reg": [
+      {
+        "FechaReg": {
+          "$date": "2024-03-30T00:00:00.628Z"
+        },
+        "UsuarioReg": "Sofia"
+      }
+    ]
+  },
+  "negocios": [],
+  "promociones": [
+    {
+      "_id": "6",
+      "Activo": "S",
+      "Borrado": "N",
+      "tipo": "descuento_volumen",
+      "descuento": 12,
+      "condicion": "cantidad > 50",
+      "detail_row_reg": [
+        {
+          "FechaReg": {
+            "$date": "2024-03-30T00:00:00.628Z"
+          },
+          "UsuarioReg": "Sofia"
+        }
+      ]
+    }
+  ],
+  "alertas": [
+    {
+      "_id": "5",
+      "Activo": "S",
+      "Borrado": "N",
+      "fecha": {
+        "$date": "2024-11-30T00:00:00.000Z"
+      },
+      "reporte": true,
+      "mensaje": "La lista de precios expira el 30 de noviembre de 2024.",
+      "detail_row_reg": [
+        {
+          "FechaReg": {
+            "$date": "2024-03-30T00:00:00.628Z"
+          },
+          "UsuarioReg": "Sofia"
+        }
+      ]
+    }
+  ]
+},
+{
+  "IdInstitutoOK": "9005",
+  "IdListaOK": "9005-000000000006",
+  "IdListaBK": "PUBLICO-MEDICINA",
+  "DesLista": "Lista para Medicina",
+  "FechaExpiraIni": {
+    "$date": "2024-02-01T07:00:00.000Z"
+  },
+  "FechaExpiraFin": {
+    "$date": "2024-11-30T07:00:00.000Z"
+  },
+  "IdTipoListaOK": "IdTipoListaPrecios-IdMedicina",
+  "IdTipoGeneraListaOK": "IdTipoGeneraLista-IdManual",
+  "IdTipoFormulaOK": "",
+  "precios": [
+    {
+      "IdProdServOK": "5100",
+      "IdPresentaOK": "513",
+      "IdTipoFormulaOK": "5100",
+      "Formula": "5100",
+      "CostoIni": 1500,
+      "CostoFin": 1500,
+      "Precio": 1500,
+      "detail_row": {
+        "Activo": "S",
+        "Borrado": "N",
+        "detail_row_reg": [
+          {
+            "FechaReg": {
+              "$date": "2024-06-15T00:00:00.628Z"
+            },
+            "UsuarioReg": "Sofia"
+          }
+        ]
+      }
+    }
+  ],
+
+  "detail_row": {
+    "Activo": "S",
+    "Borrado": "N",
+    "detail_row_reg": [
+      {
+        "FechaReg": {
+          "$date": "2024-03-30T00:00:00.628Z"
+        },
+        "UsuarioReg": "Sofia"
+      }
+    ]
+  },
+  "negocios": [],
+  "promociones": [
+    {
+      "_id": "6",
+      "Activo": "S",
+      "Borrado": "N",
+      "tipo": "descuento_volumen",
+      "descuento": 12,
+      "condicion": "cantidad > 50",
+      "detail_row_reg": [
+        {
+          "FechaReg": {
+            "$date": "2024-03-30T00:00:00.628Z"
+          },
+          "UsuarioReg": "Sofia"
+        }
+      ]
+    }
+  ],
+  "alertas": [
+    {
+      "_id": "5",
+      "Activo": "S",
+      "Borrado": "N",
+      "fecha": {
+        "$date": "2024-11-30T00:00:00.000Z"
+      },
+      "reporte": true,
+      "mensaje": "La lista de precios expira el 30 de noviembre de 2024.",
+      "detail_row_reg": [
+        {
+          "FechaReg": {
+            "$date": "2024-03-30T00:00:00.628Z"
+          },
+          "UsuarioReg": "Sofia"
+        }
+      ]
+    }
+  ]
+},
+{
+  "IdInstitutoOK": "9005",
+  "IdListaOK": "9005-000000000007",
+  "IdListaBK": "PUBLICO-MEDICINA",
+  "DesLista": "Lista para Medicina",
+  "FechaExpiraIni": {
+    "$date": "2024-02-01T07:00:00.000Z"
+  },
+  "FechaExpiraFin": {
+    "$date": "2024-11-30T07:00:00.000Z"
+  },
+  "IdTipoListaOK": "IdTipoListaPrecios-IdMedicina",
+  "IdTipoGeneraListaOK": "IdTipoGeneraLista-IdManual",
+  "IdTipoFormulaOK": "",
+  "precios": [
+    {
+      "IdProdServOK": "5100",
+      "IdPresentaOK": "513",
+      "IdTipoFormulaOK": "5100",
+      "Formula": "5100",
+      "CostoIni": 1500,
+      "CostoFin": 1500,
+      "Precio": 1500,
+      "detail_row": {
+        "Activo": "S",
+        "Borrado": "N",
+        "detail_row_reg": [
+          {
+            "FechaReg": {
+              "$date": "2024-06-15T00:00:00.628Z"
+            },
+            "UsuarioReg": "Sofia"
+          }
+        ]
+      }
+    }
+  ],
+
+  "detail_row": {
+    "Activo": "S",
+    "Borrado": "N",
+    "detail_row_reg": [
+      {
+        "FechaReg": {
+          "$date": "2024-03-30T00:00:00.628Z"
+        },
+        "UsuarioReg": "Sofia"
+      }
+    ]
+  },
+  "negocios": [],
+  "promociones": [
+    {
+      "_id": "6",
+      "Activo": "S",
+      "Borrado": "N",
+      "tipo": "descuento_volumen",
+      "descuento": 12,
+      "condicion": "cantidad > 50",
+      "detail_row_reg": [
+        {
+          "FechaReg": {
+            "$date": "2024-03-30T00:00:00.628Z"
+          },
+          "UsuarioReg": "Sofia"
+        }
+      ]
+    }
+  ],
+  "alertas": [
+    {
+      "_id": "5",
+      "Activo": "S",
+      "Borrado": "N",
+      "fecha": {
+        "$date": "2024-11-30T00:00:00.000Z"
+      },
+      "reporte": true,
+      "mensaje": "La lista de precios expira el 30 de noviembre de 2024.",
+      "detail_row_reg": [
+        {
+          "FechaReg": {
+            "$date": "2024-03-30T00:00:00.628Z"
+          },
+          "UsuarioReg": "Sofia"
+        }
+      ]
+    }
+  ]
+},
+{
+  "IdInstitutoOK": "9005",
+  "IdListaOK": "9005-000000000008",
+  "IdListaBK": "PUBLICO-MEDICINA",
+  "DesLista": "Lista para Medicina",
+  "FechaExpiraIni": {
+    "$date": "2024-02-01T07:00:00.000Z"
+  },
+  "FechaExpiraFin": {
+    "$date": "2024-11-30T07:00:00.000Z"
+  },
+  "IdTipoListaOK": "IdTipoListaPrecios-IdMedicina",
+  "IdTipoGeneraListaOK": "IdTipoGeneraLista-IdManual",
+  "IdTipoFormulaOK": "",
+  "precios": [
+    {
+      "IdProdServOK": "5100",
+      "IdPresentaOK": "513",
+      "IdTipoFormulaOK": "5100",
+      "Formula": "5100",
+      "CostoIni": 1500,
+      "CostoFin": 1500,
+      "Precio": 1500,
+      "detail_row": {
+        "Activo": "S",
+        "Borrado": "N",
+        "detail_row_reg": [
+          {
+            "FechaReg": {
+              "$date": "2024-06-15T00:00:00.628Z"
+            },
+            "UsuarioReg": "Sofia"
+          }
+        ]
+      }
+    }
+  ],
+
+  "detail_row": {
+    "Activo": "S",
+    "Borrado": "N",
+    "detail_row_reg": [
+      {
+        "FechaReg": {
+          "$date": "2024-03-30T00:00:00.628Z"
+        },
+        "UsuarioReg": "Sofia"
+      }
+    ]
+  },
+  "negocios": [],
+  "promociones": [
+    {
+      "_id": "6",
+      "Activo": "S",
+      "Borrado": "N",
+      "tipo": "descuento_volumen",
+      "descuento": 12,
+      "condicion": "cantidad > 50",
+      "detail_row_reg": [
+        {
+          "FechaReg": {
+            "$date": "2024-03-30T00:00:00.628Z"
+          },
+          "UsuarioReg": "Sofia"
+        }
+      ]
+    }
+  ],
+  "alertas": [
+    {
+      "_id": "5",
+      "Activo": "S",
+      "Borrado": "N",
+      "fecha": {
+        "$date": "2024-11-30T00:00:00.000Z"
+      },
+      "reporte": true,
+      "mensaje": "La lista de precios expira el 30 de noviembre de 2024.",
+      "detail_row_reg": [
+        {
+          "FechaReg": {
+            "$date": "2024-03-30T00:00:00.628Z"
+          },
+          "UsuarioReg": "Sofia"
+        }
+      ]
+    }
+  ]
+},
+{
+  "IdInstitutoOK": "9005",
+  "IdListaOK": "9005-000000000009",
+  "IdListaBK": "PUBLICO-MEDICINA",
+  "DesLista": "Lista para Medicina",
+  "FechaExpiraIni": {
+    "$date": "2024-02-01T07:00:00.000Z"
+  },
+  "FechaExpiraFin": {
+    "$date": "2024-11-30T07:00:00.000Z"
+  },
+  "IdTipoListaOK": "IdTipoListaPrecios-IdMedicina",
+  "IdTipoGeneraListaOK": "IdTipoGeneraLista-IdManual",
+  "IdTipoFormulaOK": "",
+  "precios": [
+    {
+      "IdProdServOK": "5100",
+      "IdPresentaOK": "513",
+      "IdTipoFormulaOK": "5100",
+      "Formula": "5100",
+      "CostoIni": 1500,
+      "CostoFin": 1500,
+      "Precio": 1500,
+      "detail_row": {
+        "Activo": "S",
+        "Borrado": "N",
+        "detail_row_reg": [
+          {
+            "FechaReg": {
+              "$date": "2024-06-15T00:00:00.628Z"
+            },
+            "UsuarioReg": "Sofia"
+          }
+        ]
+      }
+    }
+  ],
+
+  "detail_row": {
+    "Activo": "S",
+    "Borrado": "N",
+    "detail_row_reg": [
+      {
+        "FechaReg": {
+          "$date": "2024-03-30T00:00:00.628Z"
+        },
+        "UsuarioReg": "Sofia"
+      }
+    ]
+  },
+  "negocios": [],
+  "promociones": [
+    {
+      "_id": "6",
+      "Activo": "S",
+      "Borrado": "N",
+      "tipo": "descuento_volumen",
+      "descuento": 12,
+      "condicion": "cantidad > 50",
+      "detail_row_reg": [
+        {
+          "FechaReg": {
+            "$date": "2024-03-30T00:00:00.628Z"
+          },
+          "UsuarioReg": "Sofia"
+        }
+      ]
+    }
+  ],
+  "alertas": [
+    {
+      "_id": "5",
+      "Activo": "S",
+      "Borrado": "N",
+      "fecha": {
+        "$date": "2024-11-30T00:00:00.000Z"
+      },
+      "reporte": true,
+      "mensaje": "La lista de precios expira el 30 de noviembre de 2024.",
+      "detail_row_reg": [
+        {
+          "FechaReg": {
+            "$date": "2024-03-30T00:00:00.628Z"
+          },
+          "UsuarioReg": "Sofia"
+        }
+      ]
+    }
+  ]
+},
+{
+  "IdInstitutoOK": "9005",
+  "IdListaOK": "9005-000000000010",
+  "IdListaBK": "PUBLICO-MEDICINA",
+  "DesLista": "Lista para Medicina",
+  "FechaExpiraIni": {
+    "$date": "2024-02-01T07:00:00.000Z"
+  },
+  "FechaExpiraFin": {
+    "$date": "2024-11-30T07:00:00.000Z"
+  },
+  "IdTipoListaOK": "IdTipoListaPrecios-IdMedicina",
+  "IdTipoGeneraListaOK": "IdTipoGeneraLista-IdManual",
+  "IdTipoFormulaOK": "",
+  "precios": [
+    {
+      "IdProdServOK": "5100",
+      "IdPresentaOK": "513",
+      "IdTipoFormulaOK": "5100",
+      "Formula": "5100",
+      "CostoIni": 1500,
+      "CostoFin": 1500,
+      "Precio": 1500,
+      "detail_row": {
+        "Activo": "S",
+        "Borrado": "N",
+        "detail_row_reg": [
+          {
+            "FechaReg": {
+              "$date": "2024-06-15T00:00:00.628Z"
+            },
+            "UsuarioReg": "Sofia"
+          }
+        ]
+      }
+    }
+  ],
+
+  "detail_row": {
+    "Activo": "S",
+    "Borrado": "N",
+    "detail_row_reg": [
+      {
+        "FechaReg": {
+          "$date": "2024-03-30T00:00:00.628Z"
+        },
+        "UsuarioReg": "Sofia"
+      }
+    ]
+  },
+  "negocios": [],
+  "promociones": [
+    {
+      "_id": "6",
+      "Activo": "S",
+      "Borrado": "N",
+      "tipo": "descuento_volumen",
+      "descuento": 12,
+      "condicion": "cantidad > 50",
+      "detail_row_reg": [
+        {
+          "FechaReg": {
+            "$date": "2024-03-30T00:00:00.628Z"
+          },
+          "UsuarioReg": "Sofia"
+        }
+      ]
+    }
+  ],
+  "alertas": [
+    {
+      "_id": "5",
+      "Activo": "S",
+      "Borrado": "N",
+      "fecha": {
+        "$date": "2024-11-30T00:00:00.000Z"
+      },
+      "reporte": true,
+      "mensaje": "La lista de precios expira el 30 de noviembre de 2024.",
+      "detail_row_reg": [
+        {
+          "FechaReg": {
+            "$date": "2024-03-30T00:00:00.628Z"
+          },
+          "UsuarioReg": "Sofia"
+        }
+      ]
+    }
+  ]
+},
+{
+  "IdInstitutoOK": "9006",
+  "IdListaOK": "9006-000000000001",
+  "IdListaBK": "PUBLICO-MEDICINA",
+  "DesLista": "Lista para Medicina",
+  "FechaExpiraIni": {
+    "$date": "2024-02-01T07:00:00.000Z"
+  },
+  "FechaExpiraFin": {
+    "$date": "2024-11-30T07:00:00.000Z"
+  },
+  "IdTipoListaOK": "IdTipoListaPrecios-IdMedicina",
+  "IdTipoGeneraListaOK": "IdTipoGeneraLista-IdManual",
+  "IdTipoFormulaOK": "",
+  "precios": [
+    {
+      "IdProdServOK": "5100",
+      "IdPresentaOK": "513",
+      "IdTipoFormulaOK": "5100",
+      "Formula": "5100",
+      "CostoIni": 1500,
+      "CostoFin": 1500,
+      "Precio": 1500,
+      "detail_row": {
+        "Activo": "S",
+        "Borrado": "N",
+        "detail_row_reg": [
+          {
+            "FechaReg": {
+              "$date": "2024-06-15T00:00:00.628Z"
+            },
+            "UsuarioReg": "Sofia"
+          }
+        ]
+      }
+    }
+  ],
+
+  "detail_row": {
+    "Activo": "S",
+    "Borrado": "N",
+    "detail_row_reg": [
+      {
+        "FechaReg": {
+          "$date": "2024-03-30T00:00:00.628Z"
+        },
+        "UsuarioReg": "Sofia"
+      }
+    ]
+  },
+  "negocios": [],
+  "promociones": [
+    {
+      "_id": "6",
+      "Activo": "S",
+      "Borrado": "N",
+      "tipo": "descuento_volumen",
+      "descuento": 12,
+      "condicion": "cantidad > 50",
+      "detail_row_reg": [
+        {
+          "FechaReg": {
+            "$date": "2024-03-30T00:00:00.628Z"
+          },
+          "UsuarioReg": "Sofia"
+        }
+      ]
+    }
+  ],
+  "alertas": [
+    {
+      "_id": "5",
+      "Activo": "S",
+      "Borrado": "N",
+      "fecha": {
+        "$date": "2024-11-30T00:00:00.000Z"
+      },
+      "reporte": true,
+      "mensaje": "La lista de precios expira el 30 de noviembre de 2024.",
+      "detail_row_reg": [
+        {
+          "FechaReg": {
+            "$date": "2024-03-30T00:00:00.628Z"
+          },
+          "UsuarioReg": "Sofia"
+        }
+      ]
+    }
+  ]
+},
+{
+  "IdInstitutoOK": "9007",
+  "IdListaOK": "9007-000000000002",
+  "IdListaBK": "PUBLICO-MEDICINA",
+  "DesLista": "Lista para Medicina",
+  "FechaExpiraIni": {
+    "$date": "2024-02-01T07:00:00.000Z"
+  },
+  "FechaExpiraFin": {
+    "$date": "2024-11-30T07:00:00.000Z"
+  },
+  "IdTipoListaOK": "IdTipoListaPrecios-IdMedicina",
+  "IdTipoGeneraListaOK": "IdTipoGeneraLista-IdManual",
+  "IdTipoFormulaOK": "",
+  "precios": [
+    {
+      "IdProdServOK": "5100",
+      "IdPresentaOK": "513",
+      "IdTipoFormulaOK": "5100",
+      "Formula": "5100",
+      "CostoIni": 1500,
+      "CostoFin": 1500,
+      "Precio": 1500,
+      "detail_row": {
+        "Activo": "S",
+        "Borrado": "N",
+        "detail_row_reg": [
+          {
+            "FechaReg": {
+              "$date": "2024-06-15T00:00:00.628Z"
+            },
+            "UsuarioReg": "Sofia"
+          }
+        ]
+      }
+    }
+  ],
+
+  "detail_row": {
+    "Activo": "S",
+    "Borrado": "N",
+    "detail_row_reg": [
+      {
+        "FechaReg": {
+          "$date": "2024-03-30T00:00:00.628Z"
+        },
+        "UsuarioReg": "Sofia"
+      }
+    ]
+  },
+  "negocios": [],
+  "promociones": [
+    {
+      "_id": "6",
+      "Activo": "S",
+      "Borrado": "N",
+      "tipo": "descuento_volumen",
+      "descuento": 12,
+      "condicion": "cantidad > 50",
+      "detail_row_reg": [
+        {
+          "FechaReg": {
+            "$date": "2024-03-30T00:00:00.628Z"
+          },
+          "UsuarioReg": "Sofia"
+        }
+      ]
+    }
+  ],
+  "alertas": [
+    {
+      "_id": "5",
+      "Activo": "S",
+      "Borrado": "N",
+      "fecha": {
+        "$date": "2024-11-30T00:00:00.000Z"
+      },
+      "reporte": true,
+      "mensaje": "La lista de precios expira el 30 de noviembre de 2024.",
+      "detail_row_reg": [
+        {
+          "FechaReg": {
+            "$date": "2024-03-30T00:00:00.628Z"
+          },
+          "UsuarioReg": "Sofia"
+        }
+      ]
+    }
+  ]
+},
+{
+  "IdInstitutoOK": "9008",
+  "IdListaOK": "9008-000000000003",
+  "IdListaBK": "PUBLICO-MEDICINA",
+  "DesLista": "Lista para Medicina",
+  "FechaExpiraIni": {
+    "$date": "2024-02-01T07:00:00.000Z"
+  },
+  "FechaExpiraFin": {
+    "$date": "2024-11-30T07:00:00.000Z"
+  },
+  "IdTipoListaOK": "IdTipoListaPrecios-IdMedicina",
+  "IdTipoGeneraListaOK": "IdTipoGeneraLista-IdManual",
+  "IdTipoFormulaOK": "",
+  "precios": [
+    {
+      "IdProdServOK": "5100",
+      "IdPresentaOK": "513",
+      "IdTipoFormulaOK": "5100",
+      "Formula": "5100",
+      "CostoIni": 1500,
+      "CostoFin": 1500,
+      "Precio": 1500,
+      "detail_row": {
+        "Activo": "S",
+        "Borrado": "N",
+        "detail_row_reg": [
+          {
+            "FechaReg": {
+              "$date": "2024-06-15T00:00:00.628Z"
+            },
+            "UsuarioReg": "Sofia"
+          }
+        ]
+      }
+    }
+  ],
+
+  "detail_row": {
+    "Activo": "S",
+    "Borrado": "N",
+    "detail_row_reg": [
+      {
+        "FechaReg": {
+          "$date": "2024-03-30T00:00:00.628Z"
+        },
+        "UsuarioReg": "Sofia"
+      }
+    ]
+  },
+  "negocios": [],
+  "promociones": [
+    {
+      "_id": "6",
+      "Activo": "S",
+      "Borrado": "N",
+      "tipo": "descuento_volumen",
+      "descuento": 12,
+      "condicion": "cantidad > 50",
+      "detail_row_reg": [
+        {
+          "FechaReg": {
+            "$date": "2024-03-30T00:00:00.628Z"
+          },
+          "UsuarioReg": "Sofia"
+        }
+      ]
+    }
+  ],
+  "alertas": [
+    {
+      "_id": "5",
+      "Activo": "S",
+      "Borrado": "N",
+      "fecha": {
+        "$date": "2024-11-30T00:00:00.000Z"
+      },
+      "reporte": true,
+      "mensaje": "La lista de precios expira el 30 de noviembre de 2024.",
+      "detail_row_reg": [
+        {
+          "FechaReg": {
+            "$date": "2024-03-30T00:00:00.628Z"
+          },
+          "UsuarioReg": "Sofia"
+        }
+      ]
+    }
+  ]
+},
+{
+  "IdInstitutoOK": "9009",
+  "IdListaOK": "9009-000000000004",
+  "IdListaBK": "PUBLICO-MEDICINA",
+  "DesLista": "Lista para Medicina",
+  "FechaExpiraIni": {
+    "$date": "2024-02-01T07:00:00.000Z"
+  },
+  "FechaExpiraFin": {
+    "$date": "2024-11-30T07:00:00.000Z"
+  },
+  "IdTipoListaOK": "IdTipoListaPrecios-IdMedicina",
+  "IdTipoGeneraListaOK": "IdTipoGeneraLista-IdManual",
+  "IdTipoFormulaOK": "",
+  "precios": [
+    {
+      "IdProdServOK": "5100",
+      "IdPresentaOK": "513",
+      "IdTipoFormulaOK": "5100",
+      "Formula": "5100",
+      "CostoIni": 1500,
+      "CostoFin": 1500,
+      "Precio": 1500,
+      "detail_row": {
+        "Activo": "S",
+        "Borrado": "N",
+        "detail_row_reg": [
+          {
+            "FechaReg": {
+              "$date": "2024-06-15T00:00:00.628Z"
+            },
+            "UsuarioReg": "Sofia"
+          }
+        ]
+      }
+    }
+  ],
+
+  "detail_row": {
+    "Activo": "S",
+    "Borrado": "N",
+    "detail_row_reg": [
+      {
+        "FechaReg": {
+          "$date": "2024-03-30T00:00:00.628Z"
+        },
+        "UsuarioReg": "Sofia"
+      }
+    ]
+  },
+  "negocios": [],
+  "promociones": [
+    {
+      "_id": "6",
+      "Activo": "S",
+      "Borrado": "N",
+      "tipo": "descuento_volumen",
+      "descuento": 12,
+      "condicion": "cantidad > 50",
+      "detail_row_reg": [
+        {
+          "FechaReg": {
+            "$date": "2024-03-30T00:00:00.628Z"
+          },
+          "UsuarioReg": "Sofia"
+        }
+      ]
+    }
+  ],
+  "alertas": [
+    {
+      "_id": "5",
+      "Activo": "S",
+      "Borrado": "N",
+      "fecha": {
+        "$date": "2024-11-30T00:00:00.000Z"
+      },
+      "reporte": true,
+      "mensaje": "La lista de precios expira el 30 de noviembre de 2024.",
+      "detail_row_reg": [
+        {
+          "FechaReg": {
+            "$date": "2024-03-30T00:00:00.628Z"
+          },
+          "UsuarioReg": "Sofia"
+        }
+      ]
+    }
+  ]
+}]

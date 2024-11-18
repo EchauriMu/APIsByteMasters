@@ -79,6 +79,28 @@ export const putPreciosItem = async (req, res, next) => {
   }
 };
 
+// MALR: PATCH ITEM
+export const patchPreciosItem = async (req, res, next) => {
+  try {
+    const { id } = req.params;
+    console.log('MALR: controller id ->', id);
+
+    const paPrecioItem = req.body;
+    const fecha = req.query.date ? new Date(req.query.date) : new Date();
+
+    const updatePrecioItem = await preciosServices.patchPreciosItem(id, paPrecioItem, fecha);
+
+    if (!updatePrecioItem) {
+      throw boom.badRequest('No se pudo actualizar el precio');
+    }
+
+    res.status(200).json(updatePrecioItem);
+  } catch (error) {
+    next(error);
+  }
+};
+
+
 // MALR: DELETE ITEM
 export const deletePrecioItem = async (req, res, next) => {
   try {

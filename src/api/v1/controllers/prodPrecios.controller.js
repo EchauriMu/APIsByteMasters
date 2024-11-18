@@ -45,3 +45,24 @@ export const putPrecioInLista = async (req, res, next) => {
       next(error);
     }
 };
+
+export const eliminarPrecio = async (req, res, next) => {
+  try {
+    const { id, idPrecios } = req.params; // Extrae los parámetros de la URL
+    
+    // Llama al servicio para eliminar el precio
+    console.log(idPrecios);
+    const resultado = await prodPreciosServices.eliminarPrecio(id, idPrecios);
+
+    if (!resultado) {
+      return res.status(404).json({
+        message: `No se encontró la lista con IdListaOK: ${id} o el precio con IdProdServOK: ${idPrecios}.`
+      });
+    }
+
+    // Respuesta 200 OK con mensaje
+    res.status(200).json( resultado  );
+  } catch (error) {
+    next(error)
+  }
+};

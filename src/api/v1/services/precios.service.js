@@ -23,6 +23,19 @@ export const getPreciosItem = async (id, keyType) => {
         'IdListaOK': id,
       });
     }
+     else if (keyType === 'BK') {
+      prodPrecioItem = await Precios.findOne({
+        'precios': {
+          $elemMatch: {
+            'IdPresentaOK': id,  // Buscar dentro del array 'precios' por 'IdPresentaOK'
+          }
+        }
+      });
+      if (prodPrecioItem) {
+        // Buscar dentro del array 'precios' el elemento específico que coincida con el IdPresentaOK
+        prodPrecioItem = prodPrecioItem.precios.find(p => p.IdPresentaOK === id);
+      }
+      }
     return prodPrecioItem;
   } catch (error) {
     throw boom.internal(error);
@@ -47,6 +60,37 @@ export const postPreciosItem = async (paPrecioItem) => {
 //     throw boom.badImplementation(error);
 //   }
 // };
+
+export const patchPreciosItem = async (id, paPrecioItem, fecha) => {
+  try {
+    console.log('MALR: PATCH API PRECIOS', id);
+
+    const fechaActual = fecha || new Date();
+
+    // Encuentra el precio activo en base a las fechas y el ID del producto
+    const precioExistente = await Precios.findOne({
+      'precios.IdProdServOK': id,
+      FechaExpiraIni: { $lte: fechaActual },
+      FechaExpiraFin: { $gte: fechaActual },
+    });
+
+    if (!precioExistente) {
+      throw boom.notFound('No se encontró un precio activo para el producto.');
+    }
+
+    // Actualiza solo los campos que se proporcionan en `paPrecioItem`
+    const { _id, ...fieldsToUpdate } = paPrecioItem;
+    const updateResult = await Precios.updateOne(
+      { _id: precioExistente._id },
+      { $set: fieldsToUpdate }
+    );
+
+    return updateResult;
+  } catch (error) {
+    throw boom.badImplementation(error);
+  }
+};
+
 
 export const putPreciosItem = async (id, paPrecioItem, fecha) => {
   try {
