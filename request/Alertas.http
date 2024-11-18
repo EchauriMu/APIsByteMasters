@@ -1,10 +1,10 @@
 @api = http://localhost:3020/api/v1/listas-precios
 
 ###GET ALERTAS
-GET {{api}}/9001-000000000001/alertas
+GET {{api}}/9005-000000000010/alertas
 
 ###POST ALERTA ITEM
-POST {{api}}/9001-000000000001/alertas
+POST {{api}}/9005-000000000010/alertas
 Content-Type: application/json
 
 {
@@ -24,7 +24,7 @@ Content-Type: application/json
 }
 
 ###POST ALERTAS LISTA
-POST {{api}}/9001-000000000001/alertas-lista
+POST {{api}}/9005-000000000010/alertas-lista
 Content-Type: application/json
 
 [
@@ -60,7 +60,7 @@ Content-Type: application/json
   }
 ]
 ###PUT ALERTAS ITEM
-PUT {{api}}/9001-000000000001/alertas/1
+PUT {{api}}/9005-000000000010/alertas/3
 Content-Type: application/json
 
 {
