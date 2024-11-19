@@ -2,7 +2,7 @@ import express from 'express';
 import * as historialController from '../controllers/historial.controller.js';
 
 const router = express.Router();
-
+router.get('/listas', historialController.getFullLISTAS);
 router.get('/:IdProdServOK/historial', historialController.getFullHistorialByLista);
 router.get('/:IdProdServOK/historial/:IdPresentaOK', historialController.getHistorialByIdProdServ);
 router.get('/:IdProdServOK/historial/:IdPresentaOK/:ID', historialController.getHistorialproductoregistro);

@@ -1,5 +1,18 @@
 import * as preciosHistorialService from '../services/precios.historial.service.js';
 
+
+export const getFullLISTAS = async (req, res) => {
+
+  try {
+    const LISTAS = await preciosHistorialService.getFullLISTAS();
+    res.status(200).json(LISTAS);
+  } catch (error) {
+    res.status(500).json({ message: error.message });
+  }
+};
+
+
+
 // Controlador para obtener el historial completo por IdProdServOK
 export const getFullHistorialByLista = async (req, res) => {
   const { IdProdServOK } = req.params;
