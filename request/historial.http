@@ -1,0 +1,91 @@
+@api = http://localhost:3020/api/v1/historial/
+
+### GET historial lista
+GET {{api}}9001-000000000001/historial
+
+### GET historial.historialproducto
+GET {{api}}9001-000000000001/historial/9001-000000000001-000000001
+
+### GET historial.historialproducto.elemento
+GET {{api}}9001-000000000001/historial/9001-000000000001-000000001/1
+
+### Historial Producto
+DELETE {{api}}9001-000000000001/historial/9001-000000000001-000000001
+
+### DELETE registro Historial Producto
+DELETE {{api}}9001-000000000001/historial/9001-000000000001-000000005/1731893842127
+
+### POST historial objeto
+POST {{api}}9001-000000000001/historial
+Content-Type: application/json
+
+{
+    "IdProdServOK": "9001-000000000001",
+    "IdPresentaOK": "9001-000000000001-000000002",
+    "historial": [
+      {
+        "Id": "1",
+        "IdTipoFormulaOK": "2111",
+        "Formula": "2111",
+        "CostoIni": 2111,
+        "CostoFin": 2111,
+        "Precio": 2111,
+        "detail_row":{
+          "Activo": "S",
+          "Borrado": "N",
+          "detail_row_reg": [
+              {
+                "FechaReg":  "1970-01-01T00:00:00.000Z",
+                "UsuarioReg": "Carlos"
+              }
+            ]
+        }
+      }
+    ]
+}
+
+### POST
+POST {{api}}9001-000000000001/historial/9001-000000000001-000000002
+Content-Type: application/json
+
+{
+  "Id": "2",
+  "IdTipoFormulaOK": "3111",
+  "Formula": "3111",
+  "CostoIni": 3111,
+  "CostoFin": 3111,
+  "Precio": 3111,
+  "detail_row": {
+    "Activo": "S",
+    "Borrado": "N",
+    "detail_row_reg": [
+        {
+            "FechaReg": "2024-11-17T00:00:00.000Z",
+            "UsuarioReg": "Carlos"
+        }
+    ]
+  }
+ }
+
+###PUT registro Historial Producto
+PUT {{api}}9001-000000000001/historial/9001-000000000001-000000006/1
+Content-Type: application/json
+
+{
+  "Id": "1",
+  "IdTipoFormulaOK": "3111",
+  "Formula": "3111",
+  "CostoIni": 3111,
+  "CostoFin": 3111,
+  "Precio": 3111,
+  "detail_row": {
+    "Activo": "S",
+    "Borrado": "N",
+    "detail_row_reg": [
+        {
+            "FechaReg": "2024-11-17T00:00:00.000Z",
+            "UsuarioReg": "Carlos"
+        }
+    ]
+  }
+ }
