@@ -5,7 +5,7 @@ import config from '../../../config/config';
 // Importación de rutas de precios
 import preciosRoutes from './precios.routesEduardo';
 import preciosRoutesMiguel from './precios.routesMiguel'
-
+import preciosHistorial from './historial.routes.js';
 const routerAPI = (app) => {
   const router = Router();
   const api = config.API_URL;  // Obtener la URL base desde la configuración
@@ -14,7 +14,7 @@ const routerAPI = (app) => {
   // Definir las rutas
   router.use('/listas-precios', preciosRoutes);  // Ruta de precios
   router.use('/listas-precios', preciosRoutesMiguel);  // Ruta de precios
-
+  router.use('/historial', preciosHistorial);
   return router;
 };
 

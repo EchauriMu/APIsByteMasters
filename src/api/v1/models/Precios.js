@@ -11,7 +11,7 @@ const detailRowRegSchema = new Schema({
     type: String,
     required: true
   }
-},{ _id: false });
+});
 
 const detailRowSchema = new Schema({
   Activo: {
@@ -25,7 +25,7 @@ const detailRowSchema = new Schema({
     default: 'N'
   },
   detail_row_reg: [detailRowRegSchema]
-},{ _id: false });
+});
 
 const precioSchema = new Schema({
   IdProdServOK: {
@@ -57,7 +57,7 @@ const precioSchema = new Schema({
     required: true
   },
   detail_row: detailRowSchema
-},{ _id: false });
+});
 
 const promocionSchema = new Schema({
   _id: {
@@ -89,7 +89,6 @@ const promocionSchema = new Schema({
   },
   detail_row_reg: [detailRowRegSchema]
 });
-
 
 const alertaSchema = new Schema({
   _id: {
@@ -162,7 +161,6 @@ const historialSchema = new Schema({
 });
 
 const listaPreciosSchema = new Schema({
-  
   IdInstitutoOK: {
     type: String,
     required: true
