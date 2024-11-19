@@ -1,6 +1,25 @@
 
 import ListaPrecios from '../models/Precios';
 import boom from '@hapi/boom';
+
+export const getFullLISTAS = async () => {
+  try {
+    // Consulta todos los registros de la colección/precio.
+    const listas = await ListaPrecios.find();
+
+    // Validar si hay resultados
+    if (!listas || listas.length === 0) {
+      throw boom.notFound(`No se encontraron listas de precios.`);
+    }
+
+    return listas;
+  } catch (error) {
+    throw boom.internal('Error al obtener listas de precios', error);
+  }
+};
+
+
+
 // Obtener el historial completo para un IdProdServOK específico
 export const getFullHistorialByLista = async (IdProdServOK) => {
   try {
