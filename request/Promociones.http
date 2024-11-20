@@ -1,0 +1,24 @@
+###
+GET http://localhost:3020/api/v1/listas-precios/9001-000000000001/promociones
+Content-Type: application/json
+
+### Crear una Nueva Promoción
+POST http://localhost:3020/api/v1/listas-precios/9001-000000000001/promociones
+Content-Type: application/json
+
+{
+  "tipo": "descuento_volumen",
+  "descuento": 88,
+  "condicion": "oferton"
+}
+
+### Modificar una Promoción Existente
+PUT http://localhost:3020/api/v1/listas-precios/9001-000000000001/promociones/5
+Content-Type: application/json
+
+{
+  "tipo": "descuento_personalizado",
+  "descuento": 10,
+  "condicion": "Compra mínima de 10 unidades",
+  "FechaReg": "2024-10-22"
+}
