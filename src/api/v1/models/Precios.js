@@ -11,7 +11,7 @@ const detailRowRegSchema = new Schema({
     type: String,
     required: true
   }
-},{ _id: false });
+});
 
 const detailRowSchema = new Schema({
   Activo: {
@@ -25,7 +25,7 @@ const detailRowSchema = new Schema({
     default: 'N'
   },
   detail_row_reg: [detailRowRegSchema]
-},{ _id: false });
+});
 
 const precioSchema = new Schema({
   IdProdServOK: {
@@ -57,7 +57,7 @@ const precioSchema = new Schema({
     required: true
   },
   detail_row: detailRowSchema
-},{ _id: false });
+});
 
 const promocionSchema = new Schema({
   _id: {
@@ -89,7 +89,6 @@ const promocionSchema = new Schema({
   },
   detail_row_reg: [detailRowRegSchema]
 });
-
 
 const alertaSchema = new Schema({
   _id: {
@@ -146,7 +145,7 @@ const historialItem = new Schema({
     type: Number,
     required: true
   },
-  detail_row: detailRowSchema
+  detail_row_reg: [detailRowRegSchema]
 });
 
 const historialSchema = new Schema({
@@ -161,8 +160,42 @@ const historialSchema = new Schema({
   historial: [historialItem]
 });
 
+// Esquema para las notas Juan
+const notaSchema = new Schema({
+  _id: {
+    type: String,
+    required: true
+  },
+  Usuario: {
+    type: String,
+    required: true
+  },
+  Fecha: {
+    type: Date,
+    required: true
+  },
+  Comentario: {
+    type: String,
+    required: true
+  },
+  Categoria: {
+    type: String,
+    required: true
+  },
+  Prioridad: {
+    type: String,
+    enum: ['Alta', 'Media', 'Baja'],
+    required: true
+  },
+  Estado: {
+    type: String,
+    enum: ['Pendiente', 'En proceso', 'Resuelto'],
+    required: true
+  },
+  detail_row: detailRowSchema
+});
+
 const listaPreciosSchema = new Schema({
-  
   IdInstitutoOK: {
     type: String,
     required: true
@@ -212,7 +245,8 @@ const listaPreciosSchema = new Schema({
   },
   promociones: [promocionSchema],
   alertas: [alertaSchema],
-  historial: [historialSchema]
+  historial: [historialSchema],
+  notas: [notaSchema]
 });
 
 // Exportar el modelo con su nombre 'cat_precios' y la colección 'cat_precios'
